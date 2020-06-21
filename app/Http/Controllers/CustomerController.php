@@ -9,7 +9,7 @@ use App\User;
 class CustomerController extends Controller
 {
     public function index() {
-        $customers = User::latest()->get();
+        $customers = User::where('user_type', 'customer')->latest()->get();
         return view('admin.customers.index', compact('customers'));
     }
 
@@ -24,7 +24,7 @@ class CustomerController extends Controller
             'phone' => 'required',
             'password' => 'required|confirmed',
             'password_confirmation' => 'required|same:password',
-            'email' => 'nullable|email',
+            'email' => 'nullable|email|unique:users',
         ];
 
         $messages = [
@@ -36,6 +36,7 @@ class CustomerController extends Controller
             'password.confirmed' => "Password is not matched",
             'password_confirmation.required' => "Password confirm is required",
             'password_confirmation.same' => "Password is not matched",
+            'email.unique' => "Email is already in use",
             'email.email' => "Email is invalid"
         ];
 
@@ -55,7 +56,7 @@ class CustomerController extends Controller
                 'birthday' => $request->input('birthday'),
                 'user_type' => 'customer'
             ]);
-            return redirect()->route("categories.index")->with("success", "Customer successfully created");
+            return redirect()->route("customers.index")->with("success", "Customer successfully created");
         }
         return redirect()->back()->with("error", "Failed to create customer");
     }
@@ -66,10 +67,56 @@ class CustomerController extends Controller
     }
 
     public function update(Request $request, $id) {
+        $customer = User::findOrFail($id);
+        $rules = [
+            'name' => 'required',
+            'username' => [
+                'required',
+                "unique:users,username,$id"
+            ],
+            'phone' => 'required',
+            'email' => [
+                'nullable',
+                'email',
+                "unique:users,email,$id"
+            ]
+        ];
 
+        $messages = [
+            'name.required' => "Name is required",
+            'username.required' => 'Username is required',
+            'username.unique' => "Username is already exist",
+            'phone.required' => "Phone is required",
+            'email.unique' => "Email is already in use",
+            'email.email' => "Email is invalid"
+        ];
+
+        $validator = validator()->make($request->all(), $rules, $messages);
+        if($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        else {
+            $customer->update([
+                'name' => $request->input('name'),
+                'username' => $request->input('username'),
+                'phone' => $request->input('phone'),
+                'password' => Hash::make($request->input('password')),
+                'gender' => $request->input('gender'),
+                'email' => $request->input('email'),
+                'address' => $request->input('address'),
+                'birthday' => $request->input('birthday'),
+            ]);
+            return redirect()->route("customers.index")->with("success", "Customer successfully updated");
+        }
+        return redirect()->back()->with("error", "Failed to update customer");
     }
 
     public function destroy($id) {
-
+        try {
+            User::find($id)->delete();
+            return redirect()->route('customers.index')->with('success', "Customer successfully removed");
+        } catch (\Throwable $th) {
+            return redirect()->route('customers.index')->with('error', "Failed to remove customer");
+        }
     }
 }

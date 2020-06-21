@@ -12,12 +12,13 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      @include('admin.layouts.contentHeader', ['title' => 'Create customer'])
+      @include('admin.layouts.contentHeader', ['title' => 'Customer information'])
 
       <div class="content">
         <div class="container-fluid">
-          <form role="form" action="{{ action('CustomerController@store') }}" method="POST">
+          <form role="form" action="{{ action('CustomerController@update', $customer->id) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="row">
               <div class="col-md-6">
                 <div class="card card-success">
@@ -28,7 +29,7 @@
                     <div class="form-group">
                       <label for="name">Full Name</label>
                       <input type="text" class="form-control @if($errors->has('name')) is-invalid @endif" id="name"
-                        placeholder="Enter your fullname" name="name" value="{{ old('name') }}">
+                        placeholder="Enter your fullname" name="name" value="{{ old('name', $customer->name) }}">
                       @if($errors->has('name'))
                       <div class="invalid-feedback">
                         {{$errors->first('name')}}
@@ -38,7 +39,8 @@
                     <div class="form-group">
                       <label for="username">Username</label>
                       <input type="text" class="form-control @if($errors->has('username')) is-invalid @endif"
-                        id="username" placeholder="Enter username" name="username" value="{{ old('username') }}">
+                        id="username" placeholder="Enter username" name="username"
+                        value="{{ old('username', $customer->username) }}">
                       @if($errors->has('username'))
                       <div class="invalid-feedback">
                         {{$errors->first('username')}}
@@ -48,32 +50,10 @@
                     <div class="form-group">
                       <label for="phone">Phone number</label>
                       <input type="text" class="form-control @if($errors->has('phone')) is-invalid @endif" id="phone"
-                        placeholder="Your phone number" name="phone" value="{{ old('phone') }}">
+                        placeholder="Your phone number" name="phone" value="{{ old('phone', $customer->phone) }}">
                       @if($errors->has('phone'))
                       <div class="invalid-feedback">
                         {{$errors->first('phone')}}
-                      </div>
-                      @endif
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password</label>
-                      <input type="password" class="form-control @if($errors->has('password')) is-invalid @endif"
-                        id="password" placeholder="Password" name="password" value="{{ old('password') }}">
-                      @if($errors->has('password'))
-                      <div class="invalid-feedback">
-                        {{$errors->first('password')}}
-                      </div>
-                      @endif
-                    </div>
-                    <div class="form-group">
-                      <label for="password_confirmation">Confirm Password</label>
-                      <input type="password"
-                        class="form-control @if($errors->has('password_confirmation')) is-invalid @endif"
-                        id="password_confirmation" placeholder="Confirm password" name="password_confirmation"
-                        value="{{ old('password_confirmation') }}">
-                      @if($errors->has('password_confirmation'))
-                      <div class="invalid-feedback">
-                        {{$errors->first('password_confirmation')}}
                       </div>
                       @endif
                     </div>
@@ -89,7 +69,7 @@
                     <div class="form-group">
                       <label for="gender">Gender</label>
                       <select class="form-control @if($errors->has('gender')) is-invalid @endif" id="gender"
-                        name="gender" value="{{ old('gender') }}">
+                        name="gender" value="{{ old('gender', $customer->gender) }}">
                         <option selected disabled>Select gender</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
@@ -103,7 +83,8 @@
                     <div class="form-group">
                       <label for="address">Address</label>
                       <input type="text" class="form-control @if($errors->has('address')) is-invalid @endif"
-                        id="address" placeholder="Enter your address" name="address" value="{{ old('address') }}">
+                        id="address" placeholder="Enter your address" name="address"
+                        value="{{ old('address', $customer->address) }}">
                       @if($errors->has('address'))
                       <div class="invalid-feedback">
                         {{$errors->first('address')}}
@@ -113,7 +94,8 @@
                     <div class="form-group">
                       <label for="email">Email</label>
                       <input type="text" class="form-control @if($errors->has('email')) is-invalid @endif" id="email"
-                        placeholder="Enter your email address" name="email" value="{{ old('email') }}">
+                        placeholder="Enter your email address" name="email"
+                        value="{{ old('email', $customer->email) }}">
                       @if($errors->has('email'))
                       <div class="invalid-feedback">
                         {{$errors->first('email')}}
@@ -123,7 +105,7 @@
                     <div class="form-group">
                       <label for="birthday">Date of Birth</label>
                       <input type="date" class="form-control @if($errors->has('birthday')) is-invalid @endif"
-                        id="birthday" name="birthday" value="{{ old('birthday') }}">
+                        id="birthday" name="birthday" value="{{ old('birthday', $customer->birthday) }}">
                       @if($errors->has('birthday'))
                       <div class="invalid-feedback">
                         {{$errors->first('birthday')}}
@@ -136,7 +118,7 @@
             </div>
             <div class="text-center">
               <a href="{{ route('customers.index') }}" class="btn btn-secondary">Cancel</a>
-              <button type="submit" class="btn btn-success">Create</button>
+              <button type="submit" class="btn btn-success">Save changes</button>
             </div>
           </form>
         </div>

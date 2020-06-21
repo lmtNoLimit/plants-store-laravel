@@ -44,7 +44,7 @@
                   </div>
                   <div class="card-footer text-center">
                     <button class="btn btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success">Save changes</button>
                   </div>
                 </form>
               </div>
@@ -53,8 +53,6 @@
         </div>
       </div>
     </div>
-
   </div>
-  <!-- ./wrapper -->
 
   @include('admin.layouts.partials.bottom')
