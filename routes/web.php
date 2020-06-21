@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::prefix('admin')->group(function() {
+    Route::get('/', function() {
+        return Redirect::to('/admin/dashboard');
+    });
     Route::get('dashboard', 'HomeController@dashboard')->name('dashboard');
     Route::resource('customers', 'CustomerController');
     Route::resource('products', 'ProductController');

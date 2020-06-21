@@ -47,7 +47,9 @@
                         Edit
                       </a>
                       <button class="btn btn-sm btn-danger" data-toggle="modal"
-                        data-target="#deleteModal{{ $category->id }}">Delete</button>
+                        data-target="#deleteModal{{ $category->id }}">
+                        Delete
+                      </button>
                       <div class="modal fade" id="deleteModal{{ $category->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">

@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                       <label for="password">Password</label>
-                      <input type="text" class="form-control @if($errors->has('password')) is-invalid @endif"
+                      <input type="password" class="form-control @if($errors->has('password')) is-invalid @endif"
                         id="password" placeholder="Password" name="password" value="{{ old('password') }}">
                       @if($errors->has('password'))
                       <div class="invalid-feedback">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                       <label for="password_confirmation">Confirm Password</label>
-                      <input type="text"
+                      <input type="password"
                         class="form-control @if($errors->has('password_confirmation')) is-invalid @endif"
                         id="password_confirmation" placeholder="Confirm password" name="password_confirmation"
                         value="{{ old('password_confirmation') }}">
@@ -90,6 +90,7 @@
                       <label for="gender">Gender</label>
                       <select class="form-control @if($errors->has('gender')) is-invalid @endif" id="gender"
                         name="gender" value="{{ old('gender') }}">
+                        <option selected disabled>Select gender</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                       </select>
@@ -120,12 +121,12 @@
                       @endif
                     </div>
                     <div class="form-group">
-                      <label for="title">Date of Birth</label>
-                      <input type="date" class="form-control @if($errors->has('title')) is-invalid @endif" id="title"
-                        placeholder="Enter title" name="title" value="{{ old('title') }}">
-                      @if($errors->has('title'))
+                      <label for="birthday">Date of Birth</label>
+                      <input type="date" class="form-control @if($errors->has('birthday')) is-invalid @endif"
+                        id="birthday" name="birthday" value="{{ old('birthday') }}">
+                      @if($errors->has('birthday'))
                       <div class="invalid-feedback">
-                        {{$errors->first('title')}}
+                        {{$errors->first('birthday')}}
                       </div>
                       @endif
                     </div>

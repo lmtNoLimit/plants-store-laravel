@@ -27,41 +27,67 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>User</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Reason</th>
+                    <th>Fullname</th>
+                    <th>Username</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Birthday</th>
+                    <th>Address</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($customers as $customer)
                   <tr>
-                    <td>183</td>
-                    <td>John Doe</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-success">Approved</span></td>
-                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    <td>{{ $customer->id }}</td>
+                    <td>{{ $customer->name }}</td>
+                    <td>{{ $customer->username }}</td>
+                    <td>{{ $customer->phone }}</td>
+                    <td>{{ $customer->email }}</td>
+                    <td>{{ $customer->birthday }}</td>
+                    <td>{{ $customer->address }}</td>
+                    <td>{{ $customer->created_at }}</td>
+                    <td>{{ $customer->updated_at }}</td>
+                    <td>
+                      <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-sm btn-info">
+                        Detail
+                      </a>
+                      <button class="btn btn-sm btn-danger" data-toggle="modal"
+                        data-target="#deleteModal{{ $customer->id }}">
+                        Delete
+                      </button>
+                      <div class="modal fade" id="deleteModal{{ $customer->id }}" tabindex="-1" role="dialog"
+                        aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Message</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                  aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Are you sure to delete <strong>{{ $customer->name }}</strong> from customers?</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+                                Cancel
+                              </button>
+                              <form action="{{ action('CustomerController@destroy', $customer->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                  Delete
+                                </button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
                   </tr>
-                  <tr>
-                    <td>219</td>
-                    <td>Alexander Pierce</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-warning">Pending</span></td>
-                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  </tr>
-                  <tr>
-                    <td>657</td>
-                    <td>Bob Doe</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-primary">Approved</span></td>
-                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  </tr>
-                  <tr>
-                    <td>175</td>
-                    <td>Mike Doe</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-danger">Denied</span></td>
-                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>
