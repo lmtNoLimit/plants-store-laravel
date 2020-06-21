@@ -1,5 +1,5 @@
 <a href="index3.html" class="brand-link text-center" style="padding: 6px 8px;">
-  <img src="{{ asset('dist/img/logo.svg') }}" alt="Logo" width="106">
+  <img src="{{ asset('dist/img/logo.svg') }}" alt="Logo" width="133">
 </a>
 <div class="sidebar">
   <nav class="mt-2">
