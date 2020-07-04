@@ -14,13 +14,13 @@
         <a href="{{ route('customers.index') }}"
           class="nav-link {{ request()->is('admin/customers*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-users"></i>
-          <p>Customers Management</p>
+          <p>Customers</p>
         </a>
       </li>
       <li class=" nav-item">
         <a href="{{ route('products.index') }}" class="nav-link {{ request()->is('admin/products*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-seedling"></i>
-          <p>Products Management</p>
+          <p>Products</p>
         </a>
       </li>
       <li class=" nav-item">
@@ -33,13 +33,13 @@
       <li class="nav-item">
         <a href="{{ route('orders.index') }}" class="nav-link {{ request()->is('admin/orders*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-money-bill"></i>
-          <p>Orders Management</p>
+          <p>Orders</p>
         </a>
       </li>
       <li class="nav-item">
         <a href="{{ route('news.index') }}" class="nav-link {{ request()->is('admin/news*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-newspaper"></i>
-          <p>News Management</p>
+          <p>Blogs</p>
         </a>
       </li>
     </ul>

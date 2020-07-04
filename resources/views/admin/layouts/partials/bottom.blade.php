@@ -7,7 +7,7 @@
 <!-- OPTIONAL SCRIPTS -->
 <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
 {{-- <script src="{{ asset('dist/js/demo.js') }}"></script> --}}
-{{-- <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script> --}}
+<script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 </body>
 
 </html>

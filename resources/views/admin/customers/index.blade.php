@@ -17,7 +17,7 @@
       'btnText' => 'Create customer',
       'linkTo' => route('customers.create')
       ])
-
+      @include('admin.message')
       <!-- Main content -->
       <div class="content">
         <div class="container-fluid">
