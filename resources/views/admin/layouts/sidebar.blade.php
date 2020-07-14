@@ -14,13 +14,13 @@
         <a href="{{ route('customers.index') }}"
           class="nav-link {{ request()->is('admin/customers*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-users"></i>
-          <p>Customers</p>
+          <p>{{ __('translation.customers') }}</p>
         </a>
       </li>
       <li class=" nav-item">
         <a href="{{ route('products.index') }}" class="nav-link {{ request()->is('admin/products*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-seedling"></i>
-          <p>Products</p>
+          <p>{{ __('translation.products') }}</p>
         </a>
       </li>
       <li class=" nav-item">
