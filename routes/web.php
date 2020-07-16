@@ -27,3 +27,7 @@ Route::prefix('/admin')->group(function() {
     Route::resource('orders', 'OrderController');
     Route::resource('news', 'NewsController');
 });
+
+Route::get('/test', function() {
+    return view('client.index');
+});
