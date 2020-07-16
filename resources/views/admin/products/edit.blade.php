@@ -58,8 +58,8 @@
 
                     <div class="form-group">
                       <label for="description">Description</label>
-                      <textarea type="text" class="form-control @if($errors->has('description')) is-invalid @endif"
-                        id="description" placeholder="Enter description" name="description"
+                      <textarea class="form-control @if($errors->has('description')) is-invalid @endif" id="description"
+                        placeholder="Enter description" name="description"
                         rows="8">{{ old('description', $product->description) }}</textarea>
                       @if($errors->has('description'))
                       <div class="invalid-feedback">

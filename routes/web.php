@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
 Route::prefix('/admin')->group(function() {
     Route::get('/', function() {
         return Redirect::to('/admin/dashboard');
@@ -25,9 +24,5 @@ Route::prefix('/admin')->group(function() {
     Route::resource('products', 'ProductController');
     Route::resource('categories', 'CategoryController');
     Route::resource('orders', 'OrderController');
-    Route::resource('news', 'NewsController');
-});
-
-Route::get('/test', function() {
-    return view('client.index');
+    Route::resource('blogs', 'BlogController');
 });

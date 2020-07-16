@@ -31,7 +31,7 @@
                     <th>Title</th>
                     <th>Image</th>
                     <th>Category</th>
-                    <th>Quantity</th>
+                    <th>Inventory</th>
                     <th>Price</th>
                     <th>Sale Price</th>
                     <th>Action</th>
@@ -51,11 +51,14 @@
                     <td>{{$product->sale_price}}</td>
                     <td>
                       <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-info">
-                        Edit
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-info">
+                        <i class="fas fa-cog"></i>
                       </a>
                       <button class="btn btn-sm btn-danger" data-toggle="modal"
                         data-target="#deleteModal{{ $product->id }}">
-                        Delete
+                        <i class="fas fa-trash-alt"></i>
                       </button>
                       <div class="modal fade" id="deleteModal{{ $product->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel">

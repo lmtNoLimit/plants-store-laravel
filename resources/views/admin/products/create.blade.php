@@ -56,9 +56,9 @@
 
                     <div class="form-group">
                       <label for="description">Description</label>
-                      <textarea type="text" class="form-control @if($errors->has('description')) is-invalid @endif"
-                        id="description" placeholder="Enter description" name="description"
-                        value="{{ old('description') }}" rows="5"></textarea>
+                      <textarea class="form-control @if($errors->has('description')) is-invalid @endif" id="description"
+                        placeholder="Enter description" name="description" value="{{ old('description') }}"
+                        rows="5"></textarea>
                       @if($errors->has('description'))
                       <div class="invalid-feedback">
                         {{$errors->first('description')}}
@@ -67,11 +67,11 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="description">Images</label>
+                      <label for="images">Images</label>
                       <input type="file" class="form-control-file" id="validatedCustomFile" name="images[]" multiple>
-                      @if($errors->has('description'))
+                      @if($errors->has('images'))
                       <div class="invalid-feedback">
-                        {{$errors->first('description')}}
+                        {{$errors->first('images')}}
                       </div>
                       @endif
                     </div>

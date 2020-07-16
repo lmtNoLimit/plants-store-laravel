@@ -13,9 +13,9 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @include('admin.layouts.contentHeader', [
-      'title' => 'News Management',
-      'btnText' => 'Create news',
-      'linkTo' => route('news.create')
+      'title' => 'Blogs Management',
+      'btnText' => 'Create blog',
+      'linkTo' => route('blogs.create')
       ])
 
       <!-- Main content -->
