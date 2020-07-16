@@ -17,8 +17,12 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('category_id');
-            $table->foreign("category_id")->references('id')->on('categories');
+            $table->foreign("category_id")
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade');
             $table->text('description')->nullable();
+            $table->integer('quantity');
             $table->float('price');
             $table->float('sale_price')->nullable();
             $table->timestamps();
