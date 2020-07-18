@@ -41,6 +41,14 @@
                       </div>
                       @endif
                     </div>
+                    <div class="form-group">
+                      <label for="featured_image">Image</label>
+                      <input type="file" class="form-control-file" id="validatedCustomFile" name="featured_image" multiple>
+                      @if($errors->has('featured_image'))
+                      <div class="invalid-feedback">
+                        {{$errors->first('featured_image')}}
+                      </div>
+                      @endif
                   </div>
                   <div class="card-footer text-center">
                     <button class="btn btn-secondary">Cancel</button>
