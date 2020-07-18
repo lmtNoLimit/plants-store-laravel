@@ -12,7 +12,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      @include('admin.layouts.contentHeader', ['title' => 'Create product'])
+      @include('admin.layouts.contentHeader', ['title' => 'Create blog'])
 
       <div class="content">
         <div class="container-fluid">
@@ -63,9 +63,7 @@
     </div>
   </div>
 
-  <script src="https://cdn.tiny.cloud/1/88qa93s5gx7nzwcprsx86fveie0jxxhx73p8xyh2w1xk4nbi/tinymce/5/tinymce.min.js"
-    referrerpolicy="origin" />
-  </script>
+  <script src="{{ asset('node_modules/tinymce/tinymce.js') }}"></script>
   <script>
     tinymce.init({
     selector: '#content',
