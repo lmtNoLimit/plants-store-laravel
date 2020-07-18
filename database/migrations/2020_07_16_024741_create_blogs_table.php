@@ -17,7 +17,8 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('content');
-            $table->string('feature_image');
+            $table->string('featured_image');
+            $table->boolean('published');
             $table->unsignedBigInteger('tag_id')->nullable();
             $table->foreign('tag_id')->references('id')->on('tags');
             $table->timestamps();

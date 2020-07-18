@@ -13,17 +13,9 @@
 </head>
 
 <body>
-  <!-- Humberger Begin -->
   @include('client.section.humberger_menu')
-  <!-- Humberger End -->
-
-  <!-- Header Section Begin -->
   @include('client.section.header')
-  <!-- Header Section End -->
-
-  <!-- Hero Section Begin -->
   @include('client.section.hero')
-  <!-- Hero Section End -->
 
   <!-- Breadcrumb Section Begin -->
   <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
@@ -165,7 +157,7 @@
   </section>
   <!-- Shoping Cart Section End -->
 
-  @include('client.partials.footer')
+  @include('client.section.footer')
 
   <!-- Js Plugins -->
   @include('client.common.plugin')

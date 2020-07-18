@@ -13,19 +13,10 @@
 </head>
 
 <body>
-  <!-- Humberger Begin -->
   @include('client.section.humberger_menu')
-  <!-- Humberger End -->
-
-  <!-- Header Section Begin -->
   @include('client.section.header')
-  <!-- Header Section End -->
-
-  <!-- Hero Section Begin -->
   @include('client.section.hero')
-  <!-- Hero Section End -->
 
-  {{-- Hero banner --}}
   <div class="container">
     <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
       <div class="hero__text">
@@ -82,7 +73,7 @@
           <div class="section-title">
             <h2>Featured Product</h2>
           </div>
-          <div class="featured__controls">
+          {{-- <div class="featured__controls">
             <ul>
               <li class="active" data-filter="*">All</li>
               <li data-filter=".oranges">Oranges</li>
@@ -90,10 +81,10 @@
               <li data-filter=".vegetables">Vegetables</li>
               <li data-filter=".fastfood">Fastfood</li>
             </ul>
-          </div>
+          </div> --}}
         </div>
       </div>
-      <div class="row featured__filter">
+      <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
           <div class="featured__item">
             <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
@@ -503,7 +494,7 @@
   </section>
   <!-- Blog Section End -->
 
-  @include('client.partials.footer')
+  @include('client.section.footer')
 
   <!-- Js Plugins -->
   @include('client.common.plugin')

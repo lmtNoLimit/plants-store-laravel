@@ -13,17 +13,9 @@
 </head>
 
 <body>
-  <!-- Humberger Begin -->
   @include('client.section.humberger_menu')
-  <!-- Humberger End -->
-
-  <!-- Header Section Begin -->
   @include('client.section.header')
-  <!-- Header Section End -->
-
-  <!-- Hero Section Begin -->
   @include('client.section.hero')
-  <!-- Hero Section End -->
 
   <!-- Blog Details Hero Begin -->
   <section class="blog-details-hero set-bg" data-setbg="img/blog/details/details-hero.jpg">
@@ -226,7 +218,7 @@
   </section>
   <!-- Related Blog Section End -->
 
-  @include('client.partials.footer')
+  @include('client.section.footer')
 
   <!-- Js Plugins -->
   @include('client.common.plugin')
