@@ -25,7 +25,8 @@
                 <div class="card-header">
                   <h3 class="card-title">Category info</h3>
                 </div>
-                <form role="form" action="{{ action('CategoryController@store') }}" method="POST">
+                <form role="form" action="{{ action('CategoryController@store') }}" method="POST"
+                  enctype="multipart/form-data">
                   @csrf
                   <div class="card-body">
                     <div class="form-group">
@@ -35,6 +36,15 @@
                       @if($errors->has('title'))
                       <div class="invalid-feedback">
                         {{$errors->first('title')}}
+                      </div>
+                      @endif
+                    </div>
+                    <div class="form-group">
+                      <label for="featured_image">Image</label>
+                      <input type="file" class="form-control-file" name="featured_image">
+                      @if($errors->has('featured_image'))
+                      <div class="invalid-feedback">
+                        {{$errors->first('featured_image')}}
                       </div>
                       @endif
                     </div>

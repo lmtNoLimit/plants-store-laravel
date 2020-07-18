@@ -33,9 +33,15 @@ class CategoryController extends Controller
         }
         else {
             $title = $request->input('title');
+            $image = $request->file('featured_image');
+            
+            if(!empty($image)) {
+                $imagePath = $image->store('/public/categories');
+            }
             Category::create([
                 'title' => $title,
-                'slug' => Str::slug($title, '_')
+                'slug' => Str::slug($title, '_'),
+                'featured_image' => substr($imagePath, 6)
             ]);
             return redirect()->route("categories.index")->with("success", "Category successfully created");
         }
@@ -67,9 +73,14 @@ class CategoryController extends Controller
         }
         else {
             $title = $request->input('title');
+            $image = $request->file('featured_image');
+            if(!empty($image)) {
+                $imagePath = $image->store('/public/categories');
+            }
             $category->update([
                 'title' => $title,
-                'slug' => Str::slug($title, '_')
+                'slug' => Str::slug($title, '_'),
+                'featured_image' => substr($imagePath, 6)
             ]);
             return redirect()->route("categories.index")->with("success", "Category successfully updated");
         }
