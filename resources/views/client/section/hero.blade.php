@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero hero-normal">
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
@@ -44,6 +44,7 @@
             </div>
           </div>
         </div>
+        @if(Route::current()->getName() == 'homepage')
         <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
           <div class="hero__text">
             <span>FRUIT FRESH</span>
@@ -52,6 +53,7 @@
             <a href="#" class="primary-btn">SHOP NOW</a>
           </div>
         </div>
+        @endif
       </div>
     </div>
   </div>
