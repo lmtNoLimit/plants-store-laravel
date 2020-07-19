@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use App\Blog;
 
 class HomeController extends Controller
 {
@@ -27,7 +28,8 @@ class HomeController extends Controller
     {
         $products = Product::latest()->get();
         $categories = Category::latest()->get();
-        return view('client.index', compact('products', 'categories'));
+        $blogs = Blog::latest()->take(3)->get();
+        return view('client.index', compact('products', 'categories', 'blogs'));
     }
 
     public function dashboard() {

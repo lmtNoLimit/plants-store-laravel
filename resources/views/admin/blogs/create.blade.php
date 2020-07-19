@@ -16,8 +16,7 @@
 
       <div class="content">
         <div class="container-fluid">
-          <form role="form" action="{{ action('ProductController@store') }}" method="POST"
-            enctype="multipart/form-data">
+          <form role="form" action="{{ action('BlogController@store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
               <div class="col-md-7 col-sm-12">
@@ -38,7 +37,7 @@
                     <div class="form-group">
                       <label for="content">Content</label>
                       <textarea class="form-control @if($errors->has('content')) is-invalid @endif" id="content"
-                        name="content" value="{{ old('content') }}"></textarea>
+                        name="content">{{ old('content') }}</textarea>
                       @if($errors->has('content'))
                       <div class="invalid-feedback">
                         {{$errors->first('content')}}
@@ -51,18 +50,18 @@
               <div class="col-md-4 col-sm-12">
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title  text-bold">Visibility</h3>
+                    <h3 class="card-title text-bold">Visibility</h3>
                   </div>
                   <div class="card-body">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="published" id="true" value="true" checked>
-                      <label class="form-check-label" for="true">
+                      <input class="form-check-input" type="radio" name="published" id="1" value="1" checked>
+                      <label class="form-check-label" for="1">
                         Visible
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="published" id="false" value="false">
-                      <label class="form-check-label" for="false">
+                      <input class="form-check-input" type="radio" name="published" id="0" value="0">
+                      <label class="form-check-label" for="0">
                         Hidden
                       </label>
                     </div>

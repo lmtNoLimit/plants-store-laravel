@@ -26,8 +26,7 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Slug</th>
+                    <th style="width: 60px;"></th>
                     <th>Title</th>
                     <th>Created At</th>
                     <th>Updated At</th>
@@ -37,12 +36,14 @@
                 <tbody>
                   @foreach ($categories as $category)
                   <tr>
-                    <td>{{ $category->id }}</td>
-                    <td>{{ $category->slug }}</td>
-                    <td>{{ $category->title }}</td>
-                    <td>{{ $category->created_at }}</td>
-                    <td>{{ $category->updated_at }}</td>
-                    <td>
+                    <td class="align-middle">
+                      <img src="{{ $category->featured_image ? asset('storage'.$category->featured_image) : "" }}"
+                        width="50">
+                    </td>
+                    <td class="align-middle">{{ $category->title }}</td>
+                    <td class="align-middle">{{ $category->created_at }}</td>
+                    <td class="align-middle">{{ $category->updated_at }}</td>
+                    <td class="align-middle">
                       <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-info">
                         Edit
                       </a>

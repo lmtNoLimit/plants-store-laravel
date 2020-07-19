@@ -36,12 +36,12 @@ class CategoryController extends Controller
             $image = $request->file('featured_image');
             
             if(!empty($image)) {
-                $imagePath = $image->store('/public/categories');
+                $imagePath = substr($image->store('/public/categories'), 6);
             }
             Category::create([
                 'title' => $title,
                 'slug' => Str::slug($title, '_'),
-                'featured_image' => substr($imagePath, 6)
+                'featured_image' => $imagePath ?? ""
             ]);
             return redirect()->route("categories.index")->with("success", "Category successfully created");
         }

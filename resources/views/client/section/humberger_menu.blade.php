@@ -12,7 +12,6 @@
   </div>
   <div class="humberger__menu__widget">
     <div class="header__top__right__language">
-      <img src="img/language.png" alt="">
       <div>English</div>
       <span class="arrow_carrot-down"></span>
       <ul>
