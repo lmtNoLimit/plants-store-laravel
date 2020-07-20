@@ -57,26 +57,24 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="row featured__filter">
-          @foreach($products as $product)
-          <div class="col-lg-3 col-md-4 col-sm-6 mix {{$product->category_id}}">
-            <div class="featured__item">
-              <div class="featured__item__pic set-bg" data-setbg="{{ asset('storage'.$product->images[0]->image) }}">
-                <ul class="featured__item__pic__hover">
-                  <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                  <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                  <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">{{$product->name}}</a></h6>
-                <h5>{{$product->price}}</h5>
-              </div>
+      <div class="row featured__filter">
+        @foreach($products as $product)
+        <div class="col-lg-3 col-md-4 col-sm-6 mix {{$product->category_id}}">
+          <div class="featured__item">
+            <div class="featured__item__pic set-bg" data-setbg="{{ asset('storage'.$product->images[0]->image) }}">
+              <ul class="featured__item__pic__hover">
+                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+            </div>
+            <div class="featured__item__text">
+              <h6><a href="#">{{$product->name}}</a></h6>
+              <h5>{{$product->price}}</h5>
             </div>
           </div>
-          @endforeach
         </div>
+        @endforeach
       </div>
     </div>
   </section>
