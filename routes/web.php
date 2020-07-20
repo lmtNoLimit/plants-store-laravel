@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('homepage');
+Route::get('/blogs', 'Client\BlogController@index')->name('client_blogs');
+Route::get('/blogs/{id}', 'Client\BlogController@show')->name('client_blog_detail');
+Route::get('/contact', 'Client\ContactController@index')->name('client_contact_form');
 
 Route::prefix('/admin')->group(function() {
     Route::get('/', function() {
