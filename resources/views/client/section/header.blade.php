@@ -28,7 +28,7 @@
               </ul>
             </div>
             <div class="header__top__right__auth">
-              <a href="#"><i class="fa fa-user"></i> Login</a>
+              <a href="/login"><i class="fa fa-user"></i> Login</a>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="header__logo">
-          <a href="./index.html"><img src="{{ asset('dist/img/logo.svg') }}" alt="Logo" width="120"></a>
+          <a href="{{ route('homepage') }}"><img src="{{ asset('dist/img/logo.svg') }}" alt="Logo" width="120"></a>
         </div>
       </div>
       <div class="col-lg-6">
@@ -49,7 +49,7 @@
               <a href="{{ route('homepage') }}">Home</a>
             </li>
             <li class="@if(request()->is('shop*')) active @endif">
-              <a href="./shop-grid.html">Shop</a>
+              <a href="{{ route('client_shop') }}">Shop</a>
             </li>
             <li class="@if(request()->is('blogs*')) active @endif">
               <a href="{{ route('client_blogs') }}">Blog</a>
@@ -66,7 +66,6 @@
             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
             <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
           </ul>
-          <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
       </div>
     </div>

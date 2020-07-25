@@ -12,13 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('homepage');
-Route::get('/blogs', 'Client\BlogController@index')->name('client_blogs');
-Route::get('/blogs/{id}', 'Client\BlogController@show')->name('client_blog_detail');
-Route::get('/contact', 'Client\ContactController@index')->name('client_contact_form');
-
-Route::prefix('/admin')->group(function() {
+Route::prefix('/admin')->middleware('auth')->group(function() {
     Route::get('/', function() {
         return Redirect::to('/admin/dashboard');
     });
@@ -29,3 +25,10 @@ Route::prefix('/admin')->group(function() {
     Route::resource('orders', 'OrderController');
     Route::resource('blogs', 'BlogController');
 });
+
+Route::get('/', 'HomeController@index')->name('homepage');
+Route::get('/shop', 'Client\ShopController@index')->name('client_shop');
+Route::get('/blogs', 'Client\BlogController@index')->name('client_blogs');
+Route::get('/blogs/{id}', 'Client\BlogController@show')->name('client_blog_detail');
+Route::get('/contact', 'Client\ContactController@index')->name('client_contact_form');
+

@@ -33,7 +33,6 @@
                     <th>Email</th>
                     <th>Birthday</th>
                     <th>Address</th>
-                    <th>Created At</th>
                     <th>Updated At</th>
                     <th>Action</th>
                   </tr>
@@ -48,7 +47,6 @@
                     <td>{{ $customer->email }}</td>
                     <td>{{ $customer->birthday }}</td>
                     <td>{{ $customer->address }}</td>
-                    <td>{{ $customer->created_at }}</td>
                     <td>{{ $customer->updated_at }}</td>
                     <td>
                       <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-sm btn-info">
@@ -95,7 +93,6 @@
         </div>
       </div>
     </div>
-
   </div>
   <!-- ./wrapper -->
 
