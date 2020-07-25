@@ -9,7 +9,7 @@ use App\User;
 class CustomerController extends Controller
 {
     public function index() {
-        $customers = User::where('user_type', 'customer')->latest()->get();
+        $customers = User::where('role', 'CUSTOMER')->latest()->get();
         return view('admin.customers.index', compact('customers'));
     }
 
@@ -54,7 +54,7 @@ class CustomerController extends Controller
                 'email' => $request->input('email'),
                 'address' => $request->input('address'),
                 'birthday' => $request->input('birthday'),
-                'user_type' => 'customer'
+                'role' => 'CUSTOMER'
             ]);
             return redirect()->route("customers.index")->with("success", "Customer successfully created");
         }
