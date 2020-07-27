@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-07-26T17:02:26.394Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="wVtZk3byAOcQCvgGn61n" version="13.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-27T03:39:56.238Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="hdX5t_yGgezWoU_WWMd4" version="13.5.3" type="github">
   <diagram id="et3AeFfBmYFvC4YX-WKQ" name="Page-1">
-    <mxGraphModel dx="928" dy="536" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+    <mxGraphModel dx="1092" dy="631" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="8000" pageHeight="8000" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -300,6 +300,26 @@
         </mxCell>
         <mxCell id="l6hHztyn9rgP2krN6HWv-64" value="Đặt hàng" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="767" y="342" width="65" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="l6hHztyn9rgP2krN6HWv-67" value="Website bán cây online" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="212" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l6hHztyn9rgP2krN6HWv-68" value="ADMIN" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1599" y="222" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l6hHztyn9rgP2krN6HWv-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="l6hHztyn9rgP2krN6HWv-69" target="l6hHztyn9rgP2krN6HWv-67">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1057" y="78" />
+              <mxPoint x="1357" y="78" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l6hHztyn9rgP2krN6HWv-69" value="USER" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1027" y="222" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l6hHztyn9rgP2krN6HWv-72" value="Request đăng nhập&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1131" y="52" width="130" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
