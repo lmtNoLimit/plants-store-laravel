@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-07-28T02:20:14.937Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="rT-EDt95NM2obax8hJOZ" version="13.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-28T02:24:15.454Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="-XV8zjK5AV0rPTayH_1_" version="13.5.3" type="github">
   <diagram id="et3AeFfBmYFvC4YX-WKQ" name="Page-1">
-    <mxGraphModel dx="928" dy="590" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="8000" pageHeight="8000" background="#FFFFFF" math="0" shadow="0">
+    <mxGraphModel dx="1092" dy="694" grid="1" gridSize="13" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="8000" pageHeight="8000" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -478,6 +478,9 @@
         <mxCell id="mp-Dix43uqPFVnYYOMZN-43" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;fontSize=14;" edge="1" parent="1" source="h9ZULKqXgdOWw3vTZxCR-1" target="h9ZULKqXgdOWw3vTZxCR-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="mp-Dix43uqPFVnYYOMZN-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=14;" edge="1" parent="1" source="h9ZULKqXgdOWw3vTZxCR-1" target="h9ZULKqXgdOWw3vTZxCR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="h9ZULKqXgdOWw3vTZxCR-1" value="Quản lý&amp;nbsp;&lt;br style=&quot;font-size: 14px;&quot;&gt;khách hàng" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="495" y="910" width="156" height="130" as="geometry" />
         </mxCell>
@@ -554,10 +557,10 @@
         <mxCell id="h9ZULKqXgdOWw3vTZxCR-7" value="&amp;nbsp;Báo cáo,&lt;br style=&quot;font-size: 14px;&quot;&gt;Thống kê" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="495" y="1638" width="156" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="h9ZULKqXgdOWw3vTZxCR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.14;exitY=-0.01;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;fontSize=14;exitPerimeter=0;" parent="1" source="h9ZULKqXgdOWw3vTZxCR-8" target="h9ZULKqXgdOWw3vTZxCR-1" edge="1">
+        <mxCell id="h9ZULKqXgdOWw3vTZxCR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.14;exitY=-0.01;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=14;exitPerimeter=0;" parent="1" source="h9ZULKqXgdOWw3vTZxCR-8" target="h9ZULKqXgdOWw3vTZxCR-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="157" y="929" />
+              <mxPoint x="157" y="975" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -570,10 +573,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mp-Dix43uqPFVnYYOMZN-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=14;" edge="1" parent="1" source="h9ZULKqXgdOWw3vTZxCR-8" target="h9ZULKqXgdOWw3vTZxCR-7">
+        <mxCell id="mp-Dix43uqPFVnYYOMZN-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.051;entryY=0.268;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontSize=14;entryPerimeter=0;" edge="1" parent="1" source="h9ZULKqXgdOWw3vTZxCR-8" target="h9ZULKqXgdOWw3vTZxCR-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="213" y="1657" />
+              <mxPoint x="195" y="1673" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -621,8 +624,8 @@
         <mxCell id="h9ZULKqXgdOWw3vTZxCR-12" value="users" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="729" y="955.5" width="90" height="39" as="geometry" />
         </mxCell>
-        <mxCell id="h9ZULKqXgdOWw3vTZxCR-16" value="Quản lý thông tin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="225" y="905" width="257" height="20" as="geometry" />
+        <mxCell id="h9ZULKqXgdOWw3vTZxCR-16" value="&amp;nbsp;Yêu cầu cập nhật thông tin khách hàng" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="193" y="955.5" width="257" height="20" as="geometry" />
         </mxCell>
         <mxCell id="ONju6RULt3-C7NPFHh3n-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_EKO5Ppt5Kgi72TpD_UV-2" target="_EKO5Ppt5Kgi72TpD_UV-4" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -784,7 +787,7 @@
           <mxGeometry x="637" y="1453" width="221" height="20" as="geometry" />
         </mxCell>
         <mxCell id="mp-Dix43uqPFVnYYOMZN-25" value="&amp;nbsp;Yêu cầu báo cáo, thống kê" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="250" y="1635" width="205" height="20" as="geometry" />
+          <mxGeometry x="240" y="1651" width="205" height="20" as="geometry" />
         </mxCell>
         <mxCell id="mp-Dix43uqPFVnYYOMZN-27" value="&amp;nbsp;Báo cáo, thống kê" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="210" y="1693" width="232" height="20" as="geometry" />
@@ -806,6 +809,9 @@
         </mxCell>
         <mxCell id="mp-Dix43uqPFVnYYOMZN-41" value="products" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="728" y="1137.5" width="91" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="mp-Dix43uqPFVnYYOMZN-45" value="&amp;nbsp;Kết quả cập nhật thông tin khách hàng" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="182" y="910" width="257" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
