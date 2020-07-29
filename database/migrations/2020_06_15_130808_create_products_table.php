@@ -23,8 +23,8 @@ class CreateProductsTable extends Migration
                 ->onDelete('cascade');
             $table->text('description')->nullable();
             $table->integer('quantity');
-            $table->float('price');
-            $table->float('sale_price')->nullable();
+            $table->float('price', 8, 2);
+            $table->float('sale_price', 8, 2)->nullable();
             $table->timestamps();
         });
     }

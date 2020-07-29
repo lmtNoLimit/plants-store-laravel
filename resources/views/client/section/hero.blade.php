@@ -10,7 +10,7 @@
           <ul>
             @foreach($categories as $category)
             <li>
-              <a href="#">
+              <a href="{{ route('client_shop') }}?category={{$category->slug}}">
                 {{$category->title}}
               </a>
             </li>

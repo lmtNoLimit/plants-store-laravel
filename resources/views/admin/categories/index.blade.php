@@ -37,7 +37,7 @@
                   @foreach ($categories as $category)
                   <tr>
                     <td class="align-middle">
-                      <img src="{{ $category->featured_image ? asset('storage'.$category->featured_image) : "" }}"
+                      <img src="{{ $category->featured_image ? asset('storage'.$category->featured_image) : '' }}"
                         width="50">
                     </td>
                     <td class="align-middle">{{ $category->title }}</td>
