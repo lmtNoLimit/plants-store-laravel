@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
-Route::prefix('/admin')->middleware('auth')->group(function() {
+Route::prefix('/admin')->middleware('auth', 'is_admin')->group(function() {
     Route::get('/', function() {
         return Redirect::to('/admin/dashboard');
     });

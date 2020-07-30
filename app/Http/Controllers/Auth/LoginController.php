@@ -30,7 +30,7 @@ class LoginController extends Controller
     public function username(){
         return 'username';
     }
-    
+
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
