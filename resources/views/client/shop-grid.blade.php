@@ -58,30 +58,52 @@
                 <h4>Latest Products</h4>
                 <div class="latest-product__slider owl-carousel">
                   <div class="latest-prdouct__slider__item">
-                    @for($i = 0; $i < 3; $i++)
-                    <a href="#" class="latest-product__item">
-                      <div class="latest-product__item__pic">
-                        <img src="img/latest-product/lp-1.jpg" alt="">
-                      </div>
-                      <div class="latest-product__item__text">
-                        <h6>{{ $products[$i]->name }}</h6>
-                        <span>{{ $products[$i]->price }}</span>
-                      </div>
-                    </a>
-                    @endfor
+                    @if(sizeof($products) >= 3)
+                      @for($i = 0; $i < 3; $i++)
+                      <a href="#" class="latest-product__item">
+                        <div class="latest-product__item__pic">
+                          @if(count($products[$i]->images) > 0)
+                          <img src="{{ asset('storage'.$products[$i]->images[0]->image) }}">
+                          @endif
+                        </div>
+                        <div class="latest-product__item__text">
+                          <h6>{{ $products[$i]->name }}</h6>
+                          <span>{{ $products[$i]->price }}</span>
+                        </div>
+                      </a>
+                      @endfor
+                    @else
+                      @foreach($products as $product)
+                      <a href="#" class="latest-product__item">
+                        <div class="latest-product__item__pic">
+                          @if(count($product->images) > 0)
+                          <img src="{{ asset('storage'.$product->images[0]->image) }}">
+                          @endif
+                        </div>
+                        <div class="latest-product__item__text">
+                          <h6>{{ $product->name }}</h6>
+                          <span>{{ $product->price }}</span>
+                        </div>
+                      </a>
+                      @endforeach
+                    @endif
                   </div>
                   <div class="latest-prdouct__slider__item">
-                    @for($i = 3; $i < 6; $i++)
-                    <a href="#" class="latest-product__item">
-                      <div class="latest-product__item__pic">
-                        <img src="img/latest-product/lp-1.jpg" alt="">
-                      </div>
-                      <div class="latest-product__item__text">
-                        <h6>{{ $products[$i]->name }}</h6>
-                        <span>{{ $products[$i]->price }}</span>
-                      </div>
-                    </a>
-                    @endfor
+                    @if(count($products) >= 6)
+                      @for($i = 3; $i < 6; $i++)
+                      <a href="#" class="latest-product__item">
+                        <div class="latest-product__item__pic">
+                          @if(count($products[$i]->images) > 0)
+                          <img src="{{ asset('storage'.$products[$i]->images[0]->image) }}">
+                          @endif
+                        </div>
+                        <div class="latest-product__item__text">
+                          <h6>{{ $products[$i]->name }}</h6>
+                          <span>{{ $products[$i]->price }}</span>
+                        </div>
+                      </a>
+                      @endfor
+                    @endif
                   </div>
                 </div>
               </div>
