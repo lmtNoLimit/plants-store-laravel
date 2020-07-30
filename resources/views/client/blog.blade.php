@@ -92,8 +92,7 @@
                     </li>
                   </ul>
                   <h5><a href="#">{{$blog->title}}</a></h5>
-                  <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam
-                    quaerat</p>
+                  <p class="text-truncate">{{$blog->description}}</p>
                   <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
                 </div>
               </div>
