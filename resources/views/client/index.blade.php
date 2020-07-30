@@ -21,7 +21,7 @@
     <div class="hero__item set-bg" data-setbg="{{ asset('dist/img/banner/banner.jpg') }}">
       <div class="hero__text">
         <span>Cây đẹp</span>
-        <h2>ƯU ĐÃI<br />CHO LẪN MUA TIẾP THEO</h2>
+        <h2>ƯU ĐÃI CHO LẦN<br/> MUA TIẾP THEO</h2>
         <p>Miễn phí vận chuyển</p>
         <a href="#" class="primary-btn">MUA NGAY</a>
       </div>
