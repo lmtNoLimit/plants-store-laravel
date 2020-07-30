@@ -20,10 +20,10 @@
   <div class="container mb-5">
     <div class="hero__item set-bg" data-setbg="{{ asset('dist/img/banner/banner.jpg') }}">
       <div class="hero__text">
-        <span>PLANTS SELLER</span>
-        <h2>Lorem <br />ipsum dolor.</h2>
-        <p>Free Pickup and Delivery Available</p>
-        <a href="#" class="primary-btn">SHOP NOW</a>
+        <span>Cây đẹp</span>
+        <h2>ƯU ĐÃI<br />CHO LẪN MUA TIẾP THEO</h2>
+        <p>Miễn phí vận chuyển</p>
+        <a href="#" class="primary-btn">MUA NGAY</a>
       </div>
     </div>
   </div>
