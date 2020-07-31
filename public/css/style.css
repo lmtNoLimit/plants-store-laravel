@@ -999,8 +999,8 @@ ol {
 }
 
 .latest-product__item__pic img {
-    height: 110px;
-    width: 110px;
+    width: 110px !important;
+    height: 110px !important;
 }
 
 .latest-product__item__text {
@@ -3582,4 +3582,19 @@ ol {
     .blog__details__hero__text h2 {
         font-size: 24px;
     }
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: #728d07;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #728d07 !important;
+    border-color: #728d07 !important;
 }

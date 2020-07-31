@@ -68,7 +68,7 @@
                         </div>
                         <div class="latest-product__item__text">
                           <h6>{{ $products[$i]->name }}</h6>
-                          <span>{{ $products[$i]->price }}</span>
+                          <span>@money($products[$i]->price, 'VND')</span>
                         </div>
                       </a>
                       @endfor
@@ -82,7 +82,7 @@
                         </div>
                         <div class="latest-product__item__text">
                           <h6>{{ $product->name }}</h6>
-                          <span>{{ $product->price }}</span>
+                          <span>@money($product->price, 'VND')</span>
                         </div>
                       </a>
                       @endforeach
@@ -99,7 +99,7 @@
                         </div>
                         <div class="latest-product__item__text">
                           <h6>{{ $products[$i]->name }}</h6>
-                          <span>{{ $products[$i]->price }}</span>
+                          <span>@money($products[$i]->price, 'VND')</span>
                         </div>
                       </a>
                       @endfor
@@ -138,16 +138,17 @@
                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                   </ul>
                 </div>
+
                 <div class="product__item__text">
                   <h6><a href="#">{{ $product->name }}</a></h6>
-                  <h5>{{ $product->price }}</h5>
+                  <h5>@money($product->price, 'VND')</h5>
                 </div>
               </div>
             </div>
             @endforeach
-          <div class="product__pagination">
+          </div>
+          <div class="d-flex justify-content-end">
             {{ $products->links() }}
-            <!-- <a href="#"><i class="fa fa-long-arrow-right"></i></a> -->
           </div>
         </div>
       </div>
