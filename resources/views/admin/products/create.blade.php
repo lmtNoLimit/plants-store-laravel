@@ -2,7 +2,7 @@
 
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
-    <!-- Navbar -->
+  <!-- Navbar -->
     @include('admin.layouts.navbar')
 
     <!-- Main Sidebar Container -->
