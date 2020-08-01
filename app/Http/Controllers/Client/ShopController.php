@@ -22,9 +22,19 @@ class ShopController extends Controller
         else {
             $products = Product::latest('products.created_at')->paginate(15);
         }
-
-
+        $latestProducts = Product::latest()->take(6)->get();
         $categories = Category::latest()->get();
-        return view('client.shop-grid', compact('categories', 'products'));
+        return view('client.shop-grid', compact('categories', 'products', 'latestProducts'));
+    }
+
+    public function show($id) {
+        $categories = Category::latest()->get();
+        $product = Product::findOrFail($id);
+        $relatedProducts = Product::latest()
+            ->where('category_id', $product->category_id)
+            ->whereNotIn('id', [$product->id])
+            ->take(4)
+            ->get();
+        return view('client.shop-details', compact('categories', 'product', 'relatedProducts'));
     }
 }

@@ -27,9 +27,9 @@ class HomeController extends Controller
     
     public function index()
     {
-        $products = Product::latest()->get();
+        $products = Product::latest()->take(8)->get();
         $categories = Category::latest()->get();
-        $blogs = Blog::latest()->take(3)->get();
+        $blogs = Blog::latest()->where('published', 1)->take(3)->get();
         return view('client.index', compact('products', 'categories', 'blogs'));
     }
 

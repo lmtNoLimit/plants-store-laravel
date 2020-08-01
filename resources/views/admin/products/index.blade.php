@@ -30,7 +30,6 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Image</th>
-                    <th>Category</th>
                     <th>Inventory</th>
                     <th>Price</th>
                     <th>Sale Price</th>
@@ -40,17 +39,20 @@
                 <tbody>
                   @foreach ($products as $product)
                   <tr>
-                    <td>{{$product->id}}</td>
-                    <td>{{$product->name}}</td>
+                    <td class="align-middle">{{$product->id}}</td>
+                    <td class="align-middle">{{$product->name}}</td>
                     <td>
                       <img src="{{ asset('storage'.$product->images[0]->image) }}" alt="" width="90" height="90">
                     </td>
-                    <td>{{$product->category_id}}</td>
-                    <td>{{$product->quantity}}</td>
-                    <td>{{$product->price}}</td>
-                    <td>{{$product->sale_price}}</td>
-                    <td>
-                      <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-info">
+                    <td class="align-middle">{{$product->quantity}}</td>
+                    <td class="align-middle">@money($product->price, 'VND')</td>
+                    <td class="align-middle">
+                      @if(isset($product->sale_price))
+                        @money($product->sale_price, 'VND')
+                      @endif
+                    </td>
+                    <td class="align-middle">
+                      <a href="{{ route('client_product_detail', $product->id) }}" class="btn btn-sm btn-info" target="_blank">
                         <i class="fas fa-eye"></i>
                       </a>
                       <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-info">

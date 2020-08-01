@@ -23,7 +23,7 @@
         <span>Cây đẹp</span>
         <h2>ƯU ĐÃI CHO LẦN<br/> MUA TIẾP THEO</h2>
         <p>Miễn phí vận chuyển</p>
-        <a href="#" class="primary-btn">MUA NGAY</a>
+        <a href="{{ route('client_shop') }}" class="primary-btn">MUA NGAY</a>
       </div>
     </div>
   </div>
@@ -69,8 +69,8 @@
               </ul>
             </div>
             <div class="featured__item__text">
-              <h6><a href="#">{{$product->name}}</a></h6>
-              <h5>{{$product->price}}</h5>
+              <h6><a href="{{ route('client_product_detail', $product->id) }}">{{$product->name}}</a></h6>
+              <h5>@money($product->price, 'VND')</h5>
             </div>
           </div>
         </div>
@@ -123,8 +123,8 @@
                   {{date('M j,Y', strtotime($blog->created_at))}}
                 </li>
               </ul>
-              <h5><a href="#">{{$blog->title}}</a></h5>
-              <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+              <h5><a href="{{ route('client_blog_detail', $blog->id) }}">{{$blog->title}}</a></h5>
+              <!-- <p>{{$blog->description}}</p> -->
             </div>
           </div>
         </div>

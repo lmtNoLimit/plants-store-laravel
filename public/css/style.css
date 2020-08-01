@@ -1658,7 +1658,7 @@ ol {
 -----------------------*/
 
 .product-details {
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .product__details__pic__item {
@@ -2349,10 +2349,6 @@ ol {
 /*---------------------
   Blog Sidebar
 -----------------------*/
-
-.blog__sidebar {
-    padding-top: 50px;
-}
 
 .blog__sidebar__item {
     margin-bottom: 50px;
