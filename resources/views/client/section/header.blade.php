@@ -27,9 +27,15 @@
                 <li><a href="#">English</a></li>
               </ul>
             </div>
+            @if(!auth()->user())
             <div class="header__top__right__auth">
               <a href="/login"><i class="fa fa-user"></i> Login</a>
             </div>
+            @else
+            <div class="header__top__right__auth">
+              <a href="/login">{{ auth()->user()->username }}</a>
+            </div>
+            @endif
           </div>
         </div>
       </div>
@@ -63,8 +69,7 @@
       <div class="col-lg-3">
         <div class="header__cart">
           <ul>
-            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            <li><a href="{{ route('client_cart') }}"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
           </ul>
         </div>
       </div>
