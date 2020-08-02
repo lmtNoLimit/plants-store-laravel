@@ -52,16 +52,16 @@
         <nav class="header__menu">
           <ul>
             <li class="@if(request()->is('/')) active @endif">
-              <a href="{{ route('homepage') }}">Home</a>
+              <a href="{{ route('homepage') }}">Trang chủ</a>
             </li>
             <li class="@if(request()->is('shop*')) active @endif">
-              <a href="{{ route('client_shop') }}">Shop</a>
+              <a href="{{ route('client_shop') }}">Cửa hàng</a>
             </li>
             <li class="@if(request()->is('blogs*')) active @endif">
-              <a href="{{ route('client_blogs') }}">Blog</a>
+              <a href="{{ route('client_blogs') }}">Tin tức</a>
             </li>
             <li class="@if(request()->is('contact')) active @endif">
-              <a href="{{ route('client_contact_form') }}">Contact</a>
+              <a href="{{ route('client_contact_form') }}">Liên hệ</a>
             </li>
           </ul>
         </nav>

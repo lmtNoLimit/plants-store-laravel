@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Cart extends Model
 {
-    protected $fillable = ['title'];
+    protected $fillable = ['user_id'];
 }

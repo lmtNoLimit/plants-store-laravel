@@ -56,15 +56,18 @@
             </div>
             @endif
             <p>{{ $product->description }}</p>
-            <div class="product__details__quantity">
-              <div class="quantity">
-                <div class="pro-qty">
-                  <input type="text" value="1">
+            <form action="{{ action('Client\CartController@addToCart', $product->id) }}" class="d-inline" method="POST">
+              @csrf
+              <div class="product__details__quantity">
+                <div class="quantity">
+                  <div class="pro-qty">
+                    <input type="text" name="quantity" value="1">
+                  </div>
                 </div>
               </div>
-            </div>
-            <a href="#" class="primary-btn">THÊM VÀO GIỎ</a>
-            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+              <button class="btn primary-btn">THÊM VÀO GIỎ</button>
+              <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+            </form>
             <ul>
               <li><b>Availability</b> <span>In Stock</span></li>
               <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
