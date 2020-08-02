@@ -5,8 +5,7 @@
         <div class="col-lg-6 col-md-6">
           <div class="header__top__left">
             <ul>
-              <li><i class="fa fa-envelope"></i> nkn19991101@gmail.com</li>
-              <li>Free Shipping for all Order of $99</li>
+              <li><i class="fa fa-envelope"></i> tngreen@business.com</li>
             </ul>
           </div>
         </div>
@@ -16,7 +15,6 @@
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>
               <a href="#"><i class="fa fa-linkedin"></i></a>
-
             </div>
             <div class="header__top__right__language">
               <img src="img/language.png" alt="">

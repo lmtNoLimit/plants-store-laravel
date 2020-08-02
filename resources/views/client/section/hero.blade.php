@@ -21,8 +21,8 @@
       <div class="col-lg-9">
         <div class="hero__search">
           <div class="hero__search__form">
-            <form action="#">
-              <input type="text" placeholder="Bạn cần gì?">
+            <form action="{{ route('client_shop') }}" method="GET">
+              <input type="text" name="search" placeholder="Tìm kiếm một loài cây?" value="{{ request()->get('search') }}">
               <button type="submit" class="site-btn">Tìm kiếm</button>
             </form>
           </div>

@@ -47,6 +47,7 @@
                 <button type="submit"><span class="icon_search"></span></button>
               </form>
             </div>
+            @if(sizeof($recentBlogs) > 0)
             <div class="blog__sidebar__item">
               <h4>Recent News</h4>
               <div class="blog__sidebar__recent">
@@ -57,23 +58,13 @@
                   </div>
                   <div class="blog__sidebar__recent__item__text">
                     <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                    <span>{{ date('M j,Y', strtotime($blog->created_at)) }}</span>
+                    <span>{{ date('d/m/Y', strtotime($blog->created_at)) }}</span>
                   </div>
                 </a>
                 @endforeach
               </div>
             </div>
-            <div class="blog__sidebar__item">
-              <h4>Search By</h4>
-              <div class="blog__sidebar__item__tags">
-                <a href="#">Apple</a>
-                <a href="#">Beauty</a>
-                <a href="#">Vegetables</a>
-                <a href="#">Fruit</a>
-                <a href="#">Healthy Food</a>
-                <a href="#">Lifestyle</a>
-              </div>
-            </div>
+            @endif
           </div>
         </div>
         <div class="col-lg-8 col-md-7">
@@ -88,7 +79,7 @@
                   <ul>
                     <li>
                       <i class="fa fa-calendar-o"></i>
-                      {{ date('M j,Y', strtotime($blog->created_at)) }}
+                      {{ date('d/m/Y', strtotime($blog->created_at)) }}
                     </li>
                   </ul>
                   <h5><a href="#">{{$blog->title}}</a></h5>

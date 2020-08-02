@@ -20,7 +20,13 @@ class ShopController extends Controller
                 ->paginate(15);
         }
         else {
-            $products = Product::latest('products.created_at')->paginate(15);
+            if(isset($search)) {
+                $products = Product::latest('products.created_at')
+                    ->where('name','LIKE','%'.$search.'%')
+                    ->paginate(15);
+            } else {
+                $products = Product::latest('products.created_at')->paginate(15);
+            }
         }
         $latestProducts = Product::latest()->take(6)->get();
         $categories = Category::latest()->get();

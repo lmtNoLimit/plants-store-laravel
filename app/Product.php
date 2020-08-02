@@ -16,8 +16,4 @@ class Product extends Model
     public function images() {
         return $this->hasMany(ProductImage::class);
     }
-
-    public function scopeSearch($query, $q) {
-        return $query->where("name", "like", "%".$q."%");
-    }
 }

@@ -37,7 +37,7 @@
                 @foreach($cartDetails as $cartItem)
                 <tr>
                   <td class="shoping__cart__item">
-                    <img src="img/cart/cart-1.jpg" alt="">
+                    <img src="{{ asset('storage'.$cartItem->product->images[0]->image) }}" alt="" width="80" height="80">
                     <h5>{{ $cartItem->product->name }}</h5>
                   </td>
                   <td class="shoping__cart__price">
@@ -76,7 +76,7 @@
             <form action="{{ action('Client\CartController@updateCart') }}" method="POST">
               @csrf
               @method('PUT')
-              <button type="submit" class="primary-btn cart-btn cart-btn-right border-0">
+              <button type="submit" class="primary-btn cart-btn cart-btn-right border-0 d-none">
                 <span class="icon_loading"></span>
               Cập nhật giỏ hàng</button>
             </form>

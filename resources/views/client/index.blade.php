@@ -93,7 +93,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-title from-blog__title">
-            <h2>Bài viết</h2>
+            <h2>Tin tức</h2>
           </div>
         </div>
       </div>
