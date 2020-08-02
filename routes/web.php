@@ -31,5 +31,6 @@ Route::get('/shop', 'Client\ShopController@index')->name('client_shop');
 Route::get('/products/{id}', 'Client\ShopController@show')->name('client_product_detail');
 Route::get('/blogs', 'Client\BlogController@index')->name('client_blogs');
 Route::get('/blogs/{id}', 'Client\BlogController@show')->name('client_blog_detail');
+Route::get('/cart', 'Client\CartController@index')->name('client_cart');
 Route::get('/contact', 'Client\ContactController@index')->name('client_contact_form');
 
