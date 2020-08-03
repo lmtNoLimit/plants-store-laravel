@@ -13,8 +13,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @include('admin.layouts.contentHeader', [
-      'title' => 'Products Management',
-      'btnText' => 'Create Product',
+      'title' => 'Quản lý sản phẩm',
+      'btnText' => 'Thêm sản phẩm',
       'linkTo' => route('products.create')
       ])
       @include('admin.message')
@@ -28,11 +28,11 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Title</th>
-                    <th>Image</th>
-                    <th>Inventory</th>
-                    <th>Price</th>
-                    <th>Sale Price</th>
+                    <th>Tên SP</th>
+                    <th>Ảnh</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Giá sale</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -67,22 +67,22 @@
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h4 class="modal-title">Message</h4>
+                              <h4 class="modal-title">Thông báo</h4>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                   aria-hidden="true">&times;</span></button>
                             </div>
                             <div class="modal-body">
-                              <p>Are you sure to delete <strong>{{$product->name}}</strong> from products?</p>
+                              <p>Bạn có chắc muốn xoá <strong>{{$product->name}}</strong> khỏi danh sách sản phẩm?</p>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
-                                Cancel
+                                Huỷ
                               </button>
                               <form action="{{ action('ProductController@destroy', $product->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">
-                                  Delete
+                                  Xoá
                                 </button>
                               </form>
                             </div>

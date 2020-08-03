@@ -13,9 +13,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @include('admin.layouts.contentHeader', [
-      'title' => 'Quản lý tin tức',
-      'btnText' => 'Thêm tin tức',
-      'linkTo' => route('blogs.create')
+      'title' => 'Danh sách liên hệ',
       ])
       @include('admin.message')
       <!-- Main content -->
@@ -26,36 +24,24 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th></th>
-                    <th>Tiêu đề</th>
-                    <th>Trạng thái</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Ngày gửi</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($blogs as $blog)
+                  @foreach ($contacts as $contact)
                   <tr>
-                    <td class="align-middle" style="width: 60px;">
-                      <img src="{{ asset('storage'.$blog->featured_image) }}" width="50">
-                    </td>
-                    <td class="align-middle">{{$blog->title}}</td>
+                    <td class="align-middle">{{ $contact->name }}</td>
+                    <td class="align-middle">{{ $contact->email }}</td>
+                    <td class="align-middle">{{ $contact->created_at }}</td>
                     <td class="align-middle">
-                      <span class="badge badge-{{$blog->published === 1 ? 'success' : 'light'}} p-1">
-                        {{$blog->published === 1 ? "Published" : "Unpublished"}}
-                      </span>
-                    </td>
-                    <td class="align-middle">
-                      <a href="{{ route('client_blog_detail', $blog->id) }}" class="btn btn-sm btn-info" target="_blank">
-                        <i class="fas fa-eye"></i>
-                      </a>
-                      <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-sm btn-info">
-                        <i class="fas fa-cog"></i>
-                      </a>
                       <button class="btn btn-sm btn-danger" data-toggle="modal"
-                        data-target="#deleteModal{{ $blog->id }}">
-                        <i class="fas fa-trash-alt"></i>
+                        data-target="#deleteModal{{ $contact->id }}">
+                        Delete
                       </button>
-                      <div class="modal fade" id="deleteModal{{ $blog->id }}" tabindex="-1" role="dialog"
+                      <div class="modal fade" id="deleteModal{{ $contact->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
@@ -65,13 +51,13 @@
                                   aria-hidden="true">&times;</span></button>
                             </div>
                             <div class="modal-body">
-                              <p>Are you sure to delete <strong>{{$blog->title}}</strong> from blogs?</p>
+                              <p>Are you sure to delete this category?</p>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
                                 Cancel
                               </button>
-                              <form action="{{ action('BlogController@destroy', $blog->id) }}" method="POST">
+                              <form action="{{ action('ContactController@destroy', $contact->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">

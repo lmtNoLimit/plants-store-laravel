@@ -13,8 +13,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @include('admin.layouts.contentHeader', [
-      'title' => 'Customers Management',
-      'btnText' => 'Create customer',
+      'title' => 'Quản lý khách hàng',
+      'btnText' => 'Thêm khách hàng',
       'linkTo' => route('customers.create')
       ])
       @include('admin.message')
@@ -27,13 +27,13 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Fullname</th>
-                    <th>Username</th>
-                    <th>Phone</th>
+                    <th>Họ và tên</th>
+                    <th>Tài khoản</th>
+                    <th>Điện thoại</th>
                     <th>Email</th>
-                    <th>Birthday</th>
-                    <th>Address</th>
-                    <th>Updated At</th>
+                    <th>Ngày sinh</th>
+                    <th>Địa chỉ</th>
+                    <th>Cập nhật gần nhất</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -50,11 +50,11 @@
                     <td>{{ $customer->updated_at }}</td>
                     <td>
                       <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-sm btn-info">
-                        Detail
+                        Sửa
                       </a>
                       <button class="btn btn-sm btn-danger" data-toggle="modal"
                         data-target="#deleteModal{{ $customer->id }}">
-                        Delete
+                        Xoá
                       </button>
                       <div class="modal fade" id="deleteModal{{ $customer->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel">
@@ -70,13 +70,13 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
-                                Cancel
+                                Huỷ
                               </button>
                               <form action="{{ action('CustomerController@destroy', $customer->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">
-                                  Delete
+                                  Xoá
                                 </button>
                               </form>
                             </div>

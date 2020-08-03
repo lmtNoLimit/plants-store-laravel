@@ -24,6 +24,9 @@ Route::prefix('/admin')->middleware('auth', 'is_admin')->group(function() {
     Route::resource('categories', 'CategoryController');
     Route::resource('orders', 'OrderController');
     Route::resource('blogs', 'BlogController');
+    Route::resource('contacts', 'ContactController')->only([
+        'index', 'destroy'
+    ]);
 });
 
 Route::get('/', 'HomeController@index')->name('homepage');
@@ -32,6 +35,7 @@ Route::get('/products/{id}', 'Client\ShopController@show')->name('client_product
 Route::get('/blogs', 'Client\BlogController@index')->name('client_blogs');
 Route::get('/blogs/{id}', 'Client\BlogController@show')->name('client_blog_detail');
 Route::get('/contact', 'Client\ContactController@index')->name('client_contact_form');
+Route::post('/contact', 'ContactController@store');
 
 Route::get('/cart', 'Client\CartController@index')->name('client_cart')->middleware('auth');
 Route::post('/addToCart/{productId}', 'Client\CartController@addToCart')

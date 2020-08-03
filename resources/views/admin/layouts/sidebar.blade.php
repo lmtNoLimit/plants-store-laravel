@@ -14,32 +14,38 @@
         <a href="{{ route('customers.index') }}"
           class="nav-link {{ request()->is('admin/customers*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-users"></i>
-          <p>{{ __('translation.customers') }}</p>
+          <p>Khách hàng</p>
         </a>
       </li>
       <li class=" nav-item">
         <a href="{{ route('products.index') }}" class="nav-link {{ request()->is('admin/products*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-seedling"></i>
-          <p>{{ __('translation.products') }}</p>
+          <p>Sản phẩm</p>
         </a>
       </li>
       <li class=" nav-item">
         <a href="{{ route('categories.index') }}"
           class="nav-link {{ request()->is('admin/categories*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-list"></i>
-          <p>Categories</p>
+          <p>Danh mục</p>
         </a>
       </li>
       <li class="nav-item">
         <a href="{{ route('orders.index') }}" class="nav-link {{ request()->is('admin/orders*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-money-bill"></i>
-          <p>Orders</p>
+          <p>Đơn hàng</p>
         </a>
       </li>
       <li class="nav-item">
         <a href="{{ route('blogs.index') }}" class="nav-link {{ request()->is('admin/blogs*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-newspaper"></i>
-          <p>Blogs</p>
+          <p>Tin tức</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ route('contacts.index') }}" class="nav-link {{ request()->is('admin/contacts*') ? 'active' : '' }}">
+          <i class="nav-icon fas fa-phone"></i>
+          <p>Liên hệ</p>
         </a>
       </li>
     </ul>

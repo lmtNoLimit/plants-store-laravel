@@ -16,7 +16,7 @@
   @include('client.section.humberger_menu')
   @include('client.section.header')
   @include('client.section.hero')
-
+  @include('admin.message')
   <!-- Breadcrumb Section Begin -->
   <section class="breadcrumb-section set-bg" data-setbg="{{ asset('dist/img/banner/breadcrumb.jpg') }}">
     <div class="container">
@@ -86,20 +86,21 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="contact__form__title">
-            <h2>Leave Message</h2>
+            <h2>Liên hệ với chúng tôi</h2>
           </div>
         </div>
       </div>
-      <form action="#">
+      <form action="{{ action('ContactController@store') }}" method="POST">
+        @csrf
         <div class="row">
           <div class="col-lg-6 col-md-6">
-            <input type="text" placeholder="Your name">
+            <input type="text" placeholder="Your name" name="name" value="{{ old('name') }}" required>
           </div>
           <div class="col-lg-6 col-md-6">
-            <input type="text" placeholder="Your Email">
+            <input type="email" placeholder="Your Email" name="email" value="{{ old('email') }}" required>
           </div>
           <div class="col-lg-12 text-center">
-            <textarea placeholder="Your message"></textarea>
+            <textarea placeholder="Your message" name="message">{{ old('message') }}</textarea>
             <button type="submit" class="site-btn">SEND MESSAGE</button>
           </div>
         </div>
