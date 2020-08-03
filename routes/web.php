@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::prefix('/admin')->middleware('auth', 'is_admin')->group(function() {
     Route::get('/', function() {
