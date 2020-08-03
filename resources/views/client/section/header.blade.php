@@ -31,10 +31,10 @@
             </div>
             @else
             <div class="header__top__right__language">
-              <a href="/account" class="text-dark">{{ auth()->user()->username }}</a>
+              <span class="text-dark">{{ auth()->user()->username }}</span>
               <span class="arrow_carrot-down"></span>
               <ul>
-                <li><a href="#">Tài khoản</a></li>
+                <li><a href="{{ route('client_shop') }}">Tài khoản</a></li>
                 <li><a href="{{ route('logout') }}">Đăng xuất</a></li>
               </ul>
             </div>

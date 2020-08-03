@@ -49,15 +49,15 @@
             </div>
             @if(sizeof($recentBlogs) > 0)
             <div class="blog__sidebar__item">
-              <h4>Recent News</h4>
+              <h4>Bài viết gần đây</h4>
               <div class="blog__sidebar__recent">
                 @foreach($recentBlogs as $blog)
                 <a href="#" class="blog__sidebar__recent__item">
                   <div class="blog__sidebar__recent__item__pic">
-                    <img src="img/blog/sidebar/sr-1.jpg" alt="">
+                    <img src="{{asset('storage'.$blog->featured_image)}}" alt="" width="80">
                   </div>
                   <div class="blog__sidebar__recent__item__text">
-                    <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                    <h6>{{$blog->title}}</h6>
                     <span>{{ date('d/m/Y', strtotime($blog->created_at)) }}</span>
                   </div>
                 </a>
@@ -92,9 +92,7 @@
             </div>
             @endforeach
             <div class="col-lg-12">
-              <div class="product__pagination blog__pagination">
-                {{ $latestBlogs->links() }}
-              </div>
+              {{ $latestBlogs->links() }}
             </div>
           </div>
         </div>
