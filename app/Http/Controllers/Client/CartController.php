@@ -23,15 +23,15 @@ class CartController extends Controller
 
     public function addToCart(Request $request, $productId) {
         $cart = Cart::where('user_id', auth()->user()->id)->get();
-        $cartId = $cart[0]->id;
         if(auth()->user() && sizeof($cart) == 0) {
             $cart = new Cart([
                 'user_id' => auth()->user()->id,
             ]);
             $cart->save();
             $cartId = $cart->id;
-        }
-        
+        } else {
+            $cartId = $cart[0]->id;
+        }        
 
         $quantity = $request->input('quantity') ?? 1;
         $cartDetail = CartDetail::where('cart_id', $cartId)
