@@ -69,10 +69,9 @@
               <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
             </form>
             <ul>
-              <li><b>Availability</b> <span>In Stock</span></li>
-              <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-              <li><b>Weight</b> <span>0.5 kg</span></li>
-              <li><b>Share on</b>
+              <li><b>Trạng thái</b> <span>Còn hàng</span></li>
+              <li><b>Trọng lượng</b> <span>0.5 kg</span></li>
+              <li><b>Chia sẻ</b>
                 <div class="share">
                   <a href="#"><i class="fa fa-facebook"></i></a>
                   <a href="#"><i class="fa fa-twitter"></i></a>
@@ -88,7 +87,7 @@
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                  aria-selected="true">Description</a>
+                  aria-selected="true">Mô tả</a>
               </li>
             </ul>
             <div class="tab-content">
@@ -133,7 +132,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-title related__product__title">
-            <h2>Related Product</h2>
+            <h2>Các sản phẩm cùng thể loại</h2>
           </div>
         </div>
       </div>

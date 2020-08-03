@@ -60,7 +60,7 @@
                   <div class="latest-prdouct__slider__item">
                     @if(sizeof($latestProducts) >= 3)
                       @for($i = 0; $i < 3; $i++)
-                      <a href="#" class="latest-product__item">
+                      <a href="{{ route('client_product_detail', $latestProducts[$i]->id) }}" class="latest-product__item">
                         <div class="latest-product__item__pic">
                           @if(count($latestProducts[$i]->images) > 0)
                           <img src="{{ asset('storage'.$latestProducts[$i]->images[0]->image) }}">
@@ -74,7 +74,7 @@
                       @endfor
                     @else
                       @foreach($latestProducts as $product)
-                      <a href="#" class="latest-product__item">
+                      <a href="{{ route('client_product_detail', $product->id) }}" class="latest-product__item">
                         <div class="latest-product__item__pic">
                           @if(count($product->images) > 0)
                           <img src="{{ asset('storage'.$product->images[0]->image) }}">
@@ -91,7 +91,7 @@
                   @if(count($latestProducts) >= 6)
                   <div class="latest-prdouct__slider__item">
                     @for($i = 3; $i < 6; $i++)
-                    <a href="#" class="latest-product__item">
+                    <a href="{{ route('client_product_detail', $latestProducts[$i]->id) }}" class="latest-product__item">
                       <div class="latest-product__item__pic">
                         @if(count($latestProducts[$i]->images) > 0)
                         <img src="{{ asset('storage'.$latestProducts[$i]->images[0]->image) }}">

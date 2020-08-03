@@ -49,7 +49,7 @@
                       <span class="tag">{{$blog->tags}}</span>
                     </td>
                     <td class="align-middle">
-                      <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-sm btn-info">
+                      <a href="{{ route('client_blog_detail', $blog->id) }}" class="btn btn-sm btn-info" target="_blank">
                         <i class="fas fa-eye"></i>
                       </a>
                       <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-sm btn-info">
