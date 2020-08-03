@@ -140,7 +140,6 @@ ol {
 }
 
 .spad {
-    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -2526,7 +2525,7 @@ ol {
 }
 
 .blog-details {
-    padding-bottom: 75px;
+    padding-bottom: 0px;
     border-bottom: 1px solid #e1e1e1;
 }
 

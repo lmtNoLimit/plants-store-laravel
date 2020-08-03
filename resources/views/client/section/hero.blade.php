@@ -32,7 +32,7 @@
             </div>
             <div class="hero__search__phone__text">
               <h5>+84 969.546.799</h5>
-              <span>support 24/7 time</span>
+              <span>Hỗ trợ / Tư vấn 24/7</span>
             </div>
           </div>
         </div>

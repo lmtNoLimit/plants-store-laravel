@@ -20,6 +20,7 @@
   <!-- Shoping Cart Section Begin -->
   <section class="shoping-cart spad">
     <div class="container">
+      @if(sizeof($cartDetails) > 0)
       <div class="row">
         <div class="col-lg-12">
           <div class="shoping__cart__table">
@@ -46,7 +47,7 @@
                   <td class="shoping__cart__quantity">
                     <div class="quantity">
                       <div class="pro-qty">
-                        <input type="text" name="quantity{{$cartItem->product->id}}" value="{{ $cartItem->quantity }}">
+                        <input type="text" name="quantity{{$cartItem->product->id}}" value="{{ $cartItem->quantity }}" disabled>
                       </div>
                     </div>
                   </td>
@@ -101,6 +102,9 @@
           </div>
         </div>
       </div>
+      @else 
+      <h2>Giỏ hàng của bạn trống</h2>
+      @endif
     </div>
   </section>
   <!-- Shoping Cart Section End -->

@@ -2516,14 +2516,14 @@ ol {
 
 .blog__details__hero__text h2 {
     font-size: 46px;
-    color: #ffffff;
+    color: #5f7505;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .blog__details__hero__text ul li {
     font-size: 16px;
-    color: #ffffff;
+    color: #5f7505;
     list-style: none;
     display: inline-block;
     margin-right: 45px;
@@ -2559,7 +2559,7 @@ ol {
 }
 
 .blog-details {
-    padding-bottom: 75px;
+    padding-bottom: 0px;
     border-bottom: 1px solid #e1e1e1;
 }
 

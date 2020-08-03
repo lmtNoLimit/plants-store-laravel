@@ -18,10 +18,10 @@
             </div>
             <div class="header__top__right__language">
               <img src="img/language.png" alt="">
-              <div>English</div>
+              <div>Tiếng Việt</div>
               <span class="arrow_carrot-down"></span>
               <ul>
-                <li><a href="#">Vietnamese</a></li>
+                <li><a href="#">Tiếng Việt</a></li>
                 <li><a href="#">English</a></li>
               </ul>
             </div>
@@ -30,8 +30,13 @@
               <a href="/login"><i class="fa fa-user"></i> Login</a>
             </div>
             @else
-            <div class="header__top__right__auth">
-              <a href="/login">{{ auth()->user()->username }}</a>
+            <div class="header__top__right__language">
+              <a href="/account" class="text-dark">{{ auth()->user()->username }}</a>
+              <span class="arrow_carrot-down"></span>
+              <ul>
+                <li><a href="#">Tài khoản</a></li>
+                <li><a href="#">Đăng xuất</a></li>
+              </ul>
             </div>
             @endif
           </div>
@@ -67,7 +72,13 @@
       <div class="col-lg-3">
         <div class="header__cart">
           <ul>
-            <li><a href="{{ route('client_cart') }}"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            <li>
+              <a href="{{ route('client_cart') }}">
+                <!-- <i class="fa fa-shopping-bag"></i> -->
+                <p class="d-inline">Giỏ hàng</p>
+                <i class="fa fa-shopping-bag"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -55,7 +55,7 @@
             </div>
             <div class="sidebar__item">
               <div class="latest-product__text">
-                <h4>Latest Products</h4>
+                <h4>Sản phẩm mới</h4>
                 <div class="latest-product__slider owl-carousel">
                   <div class="latest-prdouct__slider__item">
                     @if(sizeof($latestProducts) >= 3)

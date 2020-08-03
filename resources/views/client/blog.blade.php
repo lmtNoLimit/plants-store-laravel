@@ -82,9 +82,11 @@
                       {{ date('d/m/Y', strtotime($blog->created_at)) }}
                     </li>
                   </ul>
-                  <h5><a href="#">{{$blog->title}}</a></h5>
+                  <h5><a href="{{ route('client_blog_detail', $blog->id) }}">{{$blog->title}}</a></h5>
                   <p class="text-truncate">{{$blog->description}}</p>
-                  <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                  <a href="{{ route('client_blog_detail', $blog->id) }}" class="blog__btn">
+                    READ MORE <span class="arrow_right"></span>
+                  </a>
                 </div>
               </div>
             </div>

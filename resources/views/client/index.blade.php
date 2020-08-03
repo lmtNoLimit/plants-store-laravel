@@ -37,7 +37,7 @@
           @foreach($categories as $category)
           <div class="col-lg-3">
             <div class="categories__item set-bg" data-setbg="{{ asset('storage'.$category->featured_image) }}">
-              <h5><a href="#">{{$category->title}}</a></h5>
+              <h5><a href="/shop?category={{$category->slug}}">{{$category->title}}</a></h5>
             </div>
           </div>
           @endforeach
