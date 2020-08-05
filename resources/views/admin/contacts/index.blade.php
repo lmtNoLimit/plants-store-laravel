@@ -26,6 +26,7 @@
                   <tr>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Nội dung</th>
                     <th>Ngày gửi</th>
                     <th>Action</th>
                   </tr>
@@ -35,6 +36,7 @@
                   <tr>
                     <td class="align-middle">{{ $contact->name }}</td>
                     <td class="align-middle">{{ $contact->email }}</td>
+                    <td class="align-middle">{{ $contact->message }}</td>
                     <td class="align-middle">{{ $contact->created_at }}</td>
                     <td class="align-middle">
                       <button class="btn btn-sm btn-danger" data-toggle="modal"

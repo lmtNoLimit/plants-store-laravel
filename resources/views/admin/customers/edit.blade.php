@@ -12,7 +12,9 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      @include('admin.layouts.contentHeader', ['title' => 'Customer information'])
+      @include('admin.layouts.contentHeader', [
+        'title' => 'Cập nhật thông tin khách hàng'
+      ])
 
       <div class="content">
         <div class="container-fluid">
@@ -23,13 +25,13 @@
               <div class="col-md-6">
                 <div class="card card-success">
                   <div class="card-header">
-                    <h3 class="card-title">Required information</h3>
+                    <h3 class="card-title">Thông tin bắt buộc</h3>
                   </div>
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="name">Full Name</label>
+                      <label for="name">Họ và tên</label>
                       <input type="text" class="form-control @if($errors->has('name')) is-invalid @endif" id="name"
-                        placeholder="Enter your fullname" name="name" value="{{ old('name', $customer->name) }}">
+                        placeholder="Nhập họ và tên" name="name" value="{{ old('name', $customer->name) }}">
                       @if($errors->has('name'))
                       <div class="invalid-feedback">
                         {{$errors->first('name')}}
@@ -37,9 +39,9 @@
                       @endif
                     </div>
                     <div class="form-group">
-                      <label for="username">Username</label>
+                      <label for="username">Tên tài khoản</label>
                       <input type="text" class="form-control @if($errors->has('username')) is-invalid @endif"
-                        id="username" placeholder="Enter username" name="username"
+                        id="username" placeholder="Nhập tên tài khoản" name="username"
                         value="{{ old('username', $customer->username) }}">
                       @if($errors->has('username'))
                       <div class="invalid-feedback">
@@ -48,9 +50,9 @@
                       @endif
                     </div>
                     <div class="form-group">
-                      <label for="phone">Phone number</label>
+                      <label for="phone">Số điện thoại</label>
                       <input type="text" class="form-control @if($errors->has('phone')) is-invalid @endif" id="phone"
-                        placeholder="Your phone number" name="phone" value="{{ old('phone', $customer->phone) }}">
+                        placeholder="Nhập số điện thoại" name="phone" value="{{ old('phone', $customer->phone) }}">
                       @if($errors->has('phone'))
                       <div class="invalid-feedback">
                         {{$errors->first('phone')}}
@@ -63,16 +65,16 @@
               <div class="col-md-6">
                 <div class="card card-success">
                   <div class="card-header">
-                    <h3 class="card-title">Advanced information</h3>
+                    <h3 class="card-title">Thông tin bổ sung</h3>
                   </div>
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="gender">Gender</label>
+                      <label for="gender">Giới tính</label>
                       <select class="form-control @if($errors->has('gender')) is-invalid @endif" id="gender"
                         name="gender" value="{{ old('gender', $customer->gender) }}">
                         <option selected disabled>Select gender</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
+                        <option value="female">Nữ</option>
+                        <option value="male">Nam</option>
                       </select>
                       @if($errors->has('gender'))
                       <div class="invalid-feedback">
@@ -81,9 +83,9 @@
                       @endif
                     </div>
                     <div class="form-group">
-                      <label for="address">Address</label>
+                      <label for="address">Địa chỉ</label>
                       <input type="text" class="form-control @if($errors->has('address')) is-invalid @endif"
-                        id="address" placeholder="Enter your address" name="address"
+                        id="address" placeholder="Nhập địa chỉ nhà" name="address"
                         value="{{ old('address', $customer->address) }}">
                       @if($errors->has('address'))
                       <div class="invalid-feedback">
@@ -94,7 +96,7 @@
                     <div class="form-group">
                       <label for="email">Email</label>
                       <input type="text" class="form-control @if($errors->has('email')) is-invalid @endif" id="email"
-                        placeholder="Enter your email address" name="email"
+                        placeholder="Nhập địa chỉ email" name="email"
                         value="{{ old('email', $customer->email) }}">
                       @if($errors->has('email'))
                       <div class="invalid-feedback">
@@ -103,7 +105,7 @@
                       @endif
                     </div>
                     <div class="form-group">
-                      <label for="birthday">Date of Birth</label>
+                      <label for="birthday">Ngày sinh</label>
                       <input type="date" class="form-control @if($errors->has('birthday')) is-invalid @endif"
                         id="birthday" name="birthday" value="{{ old('birthday', $customer->birthday) }}">
                       @if($errors->has('birthday'))
@@ -117,8 +119,8 @@
               </div>
             </div>
             <div class="text-center">
-              <a href="{{ route('customers.index') }}" class="btn btn-secondary">Cancel</a>
-              <button type="submit" class="btn btn-success">Save changes</button>
+              <a href="{{ route('customers.index') }}" class="btn btn-secondary">Huỷ</a>
+              <button type="submit" class="btn btn-success">Cập nhật</button>
             </div>
           </form>
         </div>
