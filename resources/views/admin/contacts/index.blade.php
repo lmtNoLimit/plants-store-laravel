@@ -24,7 +24,7 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>Name</th>
+                    <th>Họ tên</th>
                     <th>Email</th>
                     <th>Nội dung</th>
                     <th>Ngày gửi</th>
@@ -41,7 +41,7 @@
                     <td class="align-middle">
                       <button class="btn btn-sm btn-danger" data-toggle="modal"
                         data-target="#deleteModal{{ $contact->id }}">
-                        Delete
+                        Xoá
                       </button>
                       <div class="modal fade" id="deleteModal{{ $contact->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel">
@@ -53,17 +53,17 @@
                                   aria-hidden="true">&times;</span></button>
                             </div>
                             <div class="modal-body">
-                              <p>Are you sure to delete this category?</p>
+                              <p>Bạn có chắc muốn xoá?</p>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
-                                Cancel
+                                Huỷ
                               </button>
                               <form action="{{ action('ContactController@destroy', $contact->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">
-                                  Delete
+                                  Xoá
                                 </button>
                               </form>
                             </div>

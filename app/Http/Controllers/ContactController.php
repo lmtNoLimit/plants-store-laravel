@@ -22,9 +22,9 @@ class ContactController extends Controller
         return redirect()->back()->with('success', 'Cảm ơn bạn đã liên lạc với chúng tôi. Chúng tôi sẽ liên lạc với bạn trong vòng 3 ngày tới');
     }
 
-    public function destroy() {
+    public function destroy($id) {
         try {
-            Contact::find($id)->delete();
+            Contact::findOrFail($id)->delete();
             return redirect()->route('contacts.index')->with('success', "Successfully removed");
         } catch (\Throwable $th) {
             return redirect()->route('contacts.index')->with('error', "Failed to remove contact");

@@ -16,7 +16,7 @@
 
               <div class="col-md-6">
                 <input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
-                  name="username" value="{{ old('username') }}" autocomplete="username" autofocus>
+                  name="username" value="{{ old('username') }}" autocomplete="username" autofocus required>
 
                 @error('username')
                 <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
 
               <div class="col-md-6">
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                  name="password" autocomplete="current-password">
+                  name="password" autocomplete="current-password" required>
 
                 @error('password')
                 <span class="invalid-feedback" role="alert">
@@ -56,7 +56,7 @@
 
             <div class="form-group row mb-0">
               <div class="col-md-8 offset-md-4">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-success">
                   {{ __('Đăng nhập') }}
                 </button>
 

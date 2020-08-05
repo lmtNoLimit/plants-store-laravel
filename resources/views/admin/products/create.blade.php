@@ -12,7 +12,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      @include('admin.layouts.contentHeader', ['title' => 'Create product'])
+      @include('admin.layouts.contentHeader', ['title' => 'Thêm sản phẩm'])
 
       <div class="content">
         <div class="container-fluid">
@@ -23,14 +23,14 @@
               <div class="col-12">
                 <div class="card card-success">
                   <div class="card-header">
-                    <h3 class="card-title">Product information</h3>
+                    <h3 class="card-title">Thông tin sản phẩm</h3>
                   </div>
                   <div class="card-body">
                     <div class="form-row">
                       <div class="col-sm-12 col-md-7 mb-3">
-                        <label for="name">Product title</label>
+                        <label for="name">Tên sản phẩm</label>
                         <input type="text" class="form-control @if($errors->has('name')) is-invalid @endif" id="name"
-                          placeholder="Product title" name="name" value="{{ old('name') }}">
+                          placeholder="Nhập tên sản phẩm" name="name" value="{{ old('name') }}">
                         @if($errors->has('name'))
                         <div class="invalid-feedback">
                           {{$errors->first('name')}}
@@ -38,7 +38,7 @@
                         @endif
                       </div>
                       <div class="col-sm-12 col-md-5 mb-3">
-                        <label for="category_id">Category</label>
+                        <label for="category_id">Danh mục</label>
                         <select class="form-control @if($errors->has('category_id')) is-invalid @endif" id="category_id"
                           name="category_id">
                           <option selected disabled>Select category</option>
@@ -55,9 +55,9 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="description">Description</label>
+                      <label for="description">Mô tả</label>
                       <textarea class="form-control @if($errors->has('description')) is-invalid @endif" id="description"
-                        placeholder="Enter description" name="description" value="{{ old('description') }}"
+                        placeholder="Mô tả chung về sản phẩm" name="description" value="{{ old('description') }}"
                         rows="5"></textarea>
                       @if($errors->has('description'))
                       <div class="invalid-feedback">
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="images">Images</label>
+                      <label for="images">Ảnh</label>
                       <input type="file" class="form-control-file" id="validatedCustomFile" name="images[]" multiple>
                       @if($errors->has('images'))
                       <div class="invalid-feedback">
@@ -78,7 +78,7 @@
 
                     <div class="form-row">
                       <div class="col-sm-12 col-md-4 mb-3">
-                        <label for="quantity">Quantity</label>
+                        <label for="quantity">Số lượng</label>
                         <input type="number" class="form-control @if($errors->has('quantity')) is-invalid @endif"
                           id="quantity" name="quantity" value="{{ old('quantity', 0) }}">
                         @if($errors->has('quantity'))
@@ -88,7 +88,7 @@
                         @endif
                       </div>
                       <div class="col-sm-12 col-md-4 mb-3">
-                        <label for="price">Price</label>
+                        <label for="price">Giá</label>
                         <input type="text" class="form-control @if($errors->has('price')) is-invalid @endif" id="price"
                           name="price" value="{{ old('price') }}">
                         @if($errors->has('price'))
@@ -98,7 +98,7 @@
                         @endif
                       </div>
                       <div class="col-sm-12 col-md-4 mb-3">
-                        <label for="sale_price">Sale Price</label>
+                        <label for="sale_price">Giá ưu đãi</label>
                         <input type="text" class="form-control @if($errors->has('sale_price')) is-invalid @endif"
                           id="sale_price" name="sale_price" value="{{ old('sale_price') }}">
                         @if($errors->has('sale_price'))
@@ -113,8 +113,8 @@
               </div>
             </div>
             <div class="text-center">
-              <a href="{{ route('products.index') }}" class="btn btn-secondary">Cancel</a>
-              <button type="submit" class="btn btn-success">Create</button>
+              <a href="{{ route('products.index') }}" class="btn btn-secondary">Huỷ</a>
+              <button type="submit" class="btn btn-success">Tạo</button>
             </div>
           </form>
         </div>

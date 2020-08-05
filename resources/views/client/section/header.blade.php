@@ -26,8 +26,11 @@
               </ul>
             </div>
             @if(!auth()->user())
+            <div class="header__top__right__auth mr-3">
+              <a href="{{ route('login') }}"><i class="fa fa-user"></i> Đăng nhập</a>
+            </div>
             <div class="header__top__right__auth">
-              <a href="/login"><i class="fa fa-user"></i> Login</a>
+              <a href="{{ route('register') }}"><i class="fa fa-user-plus"></i> Đăng ký</a>
             </div>
             @else
             <div class="header__top__right__language">
