@@ -103,7 +103,8 @@
         </div>
       </div>
       @else 
-      <h2>Giỏ hàng của bạn trống</h2>
+      <h2 class="mb-3">Giỏ hàng của bạn trống</h2>
+      <a href="{{ route('client_shop') }}" class="primary-btn cart-btn">Mua hàng</a>
       @endif
     </div>
   </section>

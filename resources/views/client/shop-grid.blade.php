@@ -123,7 +123,7 @@
             </div>
             <div class="col-lg-4 col-md-4 d-flex justify-content-end">
               <div class="filter__found">
-                <h6><span>{{ sizeof($products) }}</span> Products found</h6>
+                <h6><span>{{ sizeof($products) }}</span> Sản phẩm</h6>
               </div>
             </div>
           </div>
