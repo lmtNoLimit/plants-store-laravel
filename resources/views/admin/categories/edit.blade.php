@@ -13,7 +13,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @include('admin.layouts.contentHeader', [
-      'title' => 'Update category information',
+      'title' => 'Cập nhật thông tin danh mục',
       ])
 
       <!-- Main content -->
@@ -24,7 +24,7 @@
 
               <div class="card card-success">
                 <div class="card-header">
-                  <h3 class="card-title">Category info</h3>
+                  <h3 class="card-title">Thông tin danh mục</h3>
                 </div>
                 <!-- form start -->
                 <form role="form" action="{{ action('CategoryController@update', $category->id) }}" method="POST"
@@ -33,9 +33,9 @@
                   @method('PUT')
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="title">Title</label>
+                      <label for="title">Tiêu đề</label>
                       <input type="text" class="form-control @if($errors->has('title')) is-invalid @endif" id="title"
-                        placeholder="Enter title" name="title" value="{{ old('title', $category->title) }}">
+                        placeholder="Nhập tiêu đề" name="title" value="{{ old('title', $category->title) }}">
                       @if($errors->has('title'))
                       <div class="invalid-feedback">
                         {{$errors->first('title')}}
@@ -43,7 +43,7 @@
                       @endif
                     </div>
                     <div class="form-group">
-                      <label for="featured_image">Image</label>
+                      <label for="featured_image">Ảnh</label>
                       <input type="file" class="form-control-file" id="validatedCustomFile" name="featured_image"
                         multiple>
                       @if($category->featured_image)

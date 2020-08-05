@@ -13,8 +13,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       @include('admin.layouts.contentHeader', [
-      'title' => 'Categories',
-      'btnText' => 'Create category',
+      'title' => 'Quản lý danh mục',
+      'btnText' => 'Thêm danh mục',
       'linkTo' => route('categories.create')
       ])
       @include('admin.message')
@@ -27,9 +27,9 @@
                 <thead>
                   <tr>
                     <th style="width: 60px;"></th>
-                    <th>Title</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
+                    <th>Tiêu đề</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày cập nhật gần nhất</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -45,23 +45,23 @@
                     <td class="align-middle">{{ $category->updated_at }}</td>
                     <td class="align-middle">
                       <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-info">
-                        Edit
+                        Sửa
                       </a>
                       <button class="btn btn-sm btn-danger" data-toggle="modal"
                         data-target="#deleteModal{{ $category->id }}">
-                        Delete
+                        Xoá
                       </button>
                       <div class="modal fade" id="deleteModal{{ $category->id }}" tabindex="-1" role="dialog"
                         aria-labelledby="myModalLabel">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h4 class="modal-title">Message</h4>
+                              <h4 class="modal-title">Thông báo</h4>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                   aria-hidden="true">&times;</span></button>
                             </div>
                             <div class="modal-body">
-                              <p>Are you sure to delete this category?</p>
+                              <p>Bạn có chắc muốn xoá <strong>{{ $category->title }}</strong> khỏi danh mục?</p>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
