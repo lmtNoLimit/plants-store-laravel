@@ -98,7 +98,7 @@
               @endphp
               <li>Thành tiền <span>@money($total, 'VND')</span></li>
             </ul>
-            <a href="#" class="primary-btn">Thanh toán</a>
+            <a href="{{ route('checkout') }}" class="primary-btn">Thanh toán</a>
           </div>
         </div>
       </div>

@@ -38,10 +38,12 @@ Route::get('/blogs/{id}', 'Client\BlogController@show')->name('client_blog_detai
 Route::get('/contact', 'Client\ContactController@index')->name('client_contact_form');
 Route::post('/contact', 'ContactController@store');
 
-Route::get('/cart', 'Client\CartController@index')->name('client_cart')->middleware('auth');
-Route::post('/addToCart/{productId}', 'Client\CartController@addToCart')
-    ->name('client_add_to_cart')
-    ->middleware('auth');
-Route::put('/cart', 'Client\CartController@updateCart')->middleware('auth');
-Route::delete('/cart/{productId}', 'Client\CartController@removeItemFromCart')->middleware('auth');
+Route::middleware('auth')->group(function() {
+    Route::get('/cart', 'Client\CartController@index')->name('client_cart');
+    Route::post('/addToCart/{productId}', 'Client\CartController@addToCart')->name('client_add_to_cart');
+    Route::put('/cart', 'Client\CartController@updateCart');
+    Route::delete('/cart/{productId}', 'Client\CartController@removeItemFromCart');
+    Route::get('/checkout', 'Client\CartController@getCheckout')->name('checkout');
+    Route::post('/checkout', 'Client\CartController@checkout');
+});
 
