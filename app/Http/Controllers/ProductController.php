@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Storage;
 use App\Product;
 use App\Category;
 use App\ProductImage;
@@ -130,8 +131,13 @@ class ProductController extends Controller
         try {
             $product = Product::findOrFail($id);
             foreach($product->images as $image) {
-                Storage::delete($image->image);
-                Image::where('product_id', $id)->get()->delete();
+                // Storage::delete($image->image);
+                unlink(storage_path('app/public'.$image->image));
+            }
+            
+            $productImages = ProductImage::where('product_id', $id)->get();
+            foreach($productImages as $image) {
+                $image->delete();
             }
             $product->delete();
             return redirect()
