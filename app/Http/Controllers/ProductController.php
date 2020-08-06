@@ -128,7 +128,12 @@ class ProductController extends Controller
 
     public function destroy($id) {
         try {
-            Product::find($id)->delete();
+            $product = Product::findOrFail($id);
+            foreach($product->images as $image) {
+                Storage::delete($image->image);
+                Image::where('product_id', $id)->get()->delete();
+            }
+            $product->delete();
             return redirect()
                 ->route('products.index')
                 ->with('success', "Product successfully removed");
