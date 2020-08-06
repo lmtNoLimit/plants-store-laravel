@@ -114,6 +114,6 @@ class CartController extends Controller
             $cartItem->delete();
         }
         (Cart::where('user_id', auth()->user()->id)->get()[0])->delete();
-        return redirect()->route('homepage')->with('success', 'Cảm ơn bạn đã mua hàng. Sản phẩm sẽ được gửi đến bạn trong khoảng từ 3-5 ngày tới');
+        return redirect()->route('homepage')->with('success-popup', 'Cảm ơn bạn đã mua hàng. Sản phẩm sẽ được gửi đến bạn trong khoảng từ 3-5 ngày tới');
     }
 }

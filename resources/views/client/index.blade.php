@@ -16,6 +16,7 @@
   @include('client.section.humberger_menu')
   @include('client.section.header')
   @include('client.section.hero')
+  @include('admin.message')
 
   <div class="container mb-5">
     <div class="hero__item set-bg" data-setbg="{{ asset('dist/img/banner/banner.jpg') }}">
