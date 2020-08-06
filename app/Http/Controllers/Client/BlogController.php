@@ -19,6 +19,7 @@ class BlogController extends Controller
     public function show($id) {
         $categories = Category::latest()->get();
         $blog = Blog::findOrFail($id);
-        return view('client.blog-details', compact('categories', 'blog'));
+        $moreBlogs = Blog::latest()->take(3)->get();
+        return view('client.blog-details', compact('categories', 'blog', 'moreBlogs'));
     }
 }

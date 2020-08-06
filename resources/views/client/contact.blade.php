@@ -23,10 +23,10 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="breadcrumb__text">
-            <h2>Contact Us</h2>
+            <h2>Liên hệ</h2>
             <div class="breadcrumb__option">
-              <a href="./index.html">Home</a>
-              <span>Contact Us</span>
+              <a href="./index.html">Trang chủ</a>
+              <span>Liên hệ</span>
             </div>
           </div>
         </div>
@@ -42,21 +42,21 @@
         <div class="col-lg-3 col-md-3 col-sm-6 text-center">
           <div class="contact__widget">
             <span class="icon_phone"></span>
-            <h4>Phone</h4>
+            <h4>Điện thoại</h4>
             <p>+84.123.456.789</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 text-center">
           <div class="contact__widget">
             <span class="icon_pin_alt"></span>
-            <h4>Address</h4>
-            <p>Hoang Mai, Ha Noi, Viet Nam</p>
+            <h4>Địa chỉ</h4>
+            <p>Hoàng Mai, Hà Nội, Việt Nam</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 text-center">
           <div class="contact__widget">
             <span class="icon_clock_alt"></span>
-            <h4>Open time</h4>
+            <h4>Giờ mở cửa</h4>
             <p>09:00 AM to 10:00 PM</p>
           </div>
         </div>
@@ -94,14 +94,14 @@
         @csrf
         <div class="row">
           <div class="col-lg-6 col-md-6">
-            <input type="text" placeholder="Your name" name="name" value="{{ old('name') }}" required>
+            <input type="text" placeholder="Tên của bạn" name="name" value="{{ old('name') }}" required>
           </div>
           <div class="col-lg-6 col-md-6">
-            <input type="email" placeholder="Your Email" name="email" value="{{ old('email') }}" required>
+            <input type="email" placeholder="Địa chỉ email" name="email" value="{{ old('email') }}" required>
           </div>
           <div class="col-lg-12 text-center">
-            <textarea placeholder="Your message" name="message">{{ old('message') }}</textarea>
-            <button type="submit" class="site-btn">SEND MESSAGE</button>
+            <textarea placeholder="Message..." name="message">{{ old('message') }}</textarea>
+            <button type="submit" class="site-btn">Gửi</button>
           </div>
         </div>
       </form>

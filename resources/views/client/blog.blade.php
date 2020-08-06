@@ -23,10 +23,10 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="breadcrumb__text">
-            <h2>Blog</h2>
+            <h2>Tin tức</h2>
             <div class="breadcrumb__option">
-              <a href="{{ route('homepage') }}">Home</a>
-              <span>Blog</span>
+              <a href="{{ route('homepage') }}">Trang chủ</a>
+              <span>Tin tức</span>
             </div>
           </div>
         </div>
@@ -41,12 +41,6 @@
       <div class="row">
         <div class="col-lg-4 col-md-5">
           <div class="blog__sidebar">
-            <div class="blog__sidebar__search">
-              <form action="#">
-                <input type="text" placeholder="Search...">
-                <button type="submit"><span class="icon_search"></span></button>
-              </form>
-            </div>
             @if(sizeof($recentBlogs) > 0)
             <div class="blog__sidebar__item">
               <h4>Bài viết gần đây</h4>
@@ -85,7 +79,7 @@
                   <h5><a href="{{ route('client_blog_detail', $blog->id) }}">{{$blog->title}}</a></h5>
                   <p class="text-truncate">{{$blog->description}}</p>
                   <a href="{{ route('client_blog_detail', $blog->id) }}" class="blog__btn">
-                    READ MORE <span class="arrow_right"></span>
+                    Xem thêm <span class="arrow_right"></span>
                   </a>
                 </div>
               </div>

@@ -25,7 +25,7 @@
           <div class="breadcrumb__text">
             <h2>Shop</h2>
             <div class="breadcrumb__option">
-              <a href="{{ route('homepage') }}">Home</a>
+              <a href="{{ route('homepage') }}">Trang chủ</a>
               <span>Shop</span>
             </div>
           </div>
