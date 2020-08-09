@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 /******************************************************************
   Template Name: Ogani
   Description:  Ogani eCommerce  HTML Template
@@ -29,6 +30,7 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
+
 
 html,
 body {
@@ -3621,17 +3623,17 @@ ol {
     }
 }
 
-.pagination > li > a,
-.pagination > li > span {
+.pagination>li>a,
+.pagination>li>span {
     color: #728d07;
 }
 
-.pagination > .active > a,
-.pagination > .active > a:focus,
-.pagination > .active > a:hover,
-.pagination > .active > span,
-.pagination > .active > span:focus,
-.pagination > .active > span:hover {
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
     background-color: #728d07 !important;
     border-color: #728d07 !important;
 }
