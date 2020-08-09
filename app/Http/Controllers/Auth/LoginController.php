@@ -32,7 +32,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    /** Đăng xuất */
+    
     public function logout() {
         auth()->logout();
         return redirect(RouteServiceProvider::HOME);

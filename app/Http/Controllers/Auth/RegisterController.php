@@ -58,7 +58,6 @@ class RegisterController extends Controller
     }
 
     /**
-     *Tạo ra người dùng sau khi họ đăng khí hợp lệ
      *
      * @param  array  $data
      * @return \App\User
