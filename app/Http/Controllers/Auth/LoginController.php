@@ -20,21 +20,17 @@ class LoginController extends Controller
     public function username(){
         return 'username';
     }
-
+    /**Sau khi login sẽ chạy đến HOME */
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
     /** Đăng xuất */
     public function logout() {
+        //dd(auth()->id()); xem id của user đang đăng nhập hệ thống
+        // dd(auth()->user());  xem thông tin của user đang đăng nhập hệ thống
         auth()->logout();
         return redirect(RouteServiceProvider::HOME);
     }
 }
+/**RouteServiceProvider::HOME = "/" = ->route('homepage') */
+/**RouteServiceProvider = RouteServiceProvider.php  */
+/** readirect = chuyển hướng đến trang nào đó */

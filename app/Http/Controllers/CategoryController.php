@@ -11,6 +11,7 @@ class CategoryController extends Controller
     public function index() {
         $categories = Category::latest()->get();
         return view('admin.categories.index', compact('categories'));
+        /**['categories' => $categories] */
     }
     
     public function create() {
@@ -27,7 +28,8 @@ class CategoryController extends Controller
             'title.unique' => "Title is already exist"
         ];
 
-        $validator = validator()->make($request->all(), $rules, $messages);
+        $validator = validator()->make($request->all(), $rules, $messages); 
+        /**Kiểm tra điều kiện các input nhập vào */
         if($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
