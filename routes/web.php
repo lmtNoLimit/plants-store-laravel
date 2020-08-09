@@ -23,7 +23,8 @@ Route::prefix('/admin')->middleware('auth', 'is_admin')->group(function() {
     Route::resource('customers', 'CustomerController');
     Route::resource('products', 'ProductController');
     Route::resource('categories', 'CategoryController');
-    Route::resource('orders', 'OrderController');
+    Route::resource('orders', 'OrderController')->only(['index']);
+    Route::put('/orders/{id}/{status}', 'OrderController@update');
     Route::resource('blogs', 'BlogController');
     Route::resource('contacts', 'ContactController')->only([
         'index', 'destroy'

@@ -19,4 +19,20 @@ class OrderController extends Controller
         }
         return view('admin.orders.index', compact('orders'));
     }
+
+    public function update($id, $status) {
+        $order = Order::findOrFail($id);
+        if($status == 'approve') {
+            $order->update([
+                'status' => 'Approved'
+            ]);
+            return redirect()->route('orders.index')->with('success', "Duyệt đơn hàng thành công, đang trong quá trình xử lý");
+        } else {
+            $order->update([
+                'status' => 'Rejected'
+            ]);
+            return redirect()->route('orders.index')->with('success', "Đã từ chối đơn hàng");
+        }
+        return redirect()->back()->with('error', "Có lỗi trong quá trình xử lý");
+    }
 }

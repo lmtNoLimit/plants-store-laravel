@@ -24,7 +24,8 @@
         <div class="col-lg-6 col-md-6">
           <div class="product__details__pic">
             <div class="product__details__pic__item">
-              <img class="product__details__pic__item--large" src="{{ asset('storage'.$product->images[0]->image) }}" alt="">
+              <img class="product__details__pic__item--large" src="{{ asset('storage'.$product->images[0]->image) }}"
+                alt="">
             </div>
             <div class="product__details__pic__slider owl-carousel">
               @foreach($product->images as $image)
@@ -69,8 +70,10 @@
               <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
             </form>
             <ul>
-              <li><b>Trạng thái</b> <span>Còn hàng</span></li>
-              <li><b>Trọng lượng</b> <span>0.5 kg</span></li>
+              <li>
+                <b>Trạng thái</b>
+                <span>{{ $product->quantity > 0 ? 'Còn hàng' : 'Hết hàng' }}</span>
+              </li>
               <li><b>Chia sẻ</b>
                 <div class="share">
                   <a href="#"><i class="fa fa-facebook"></i></a>
@@ -86,8 +89,7 @@
           <div class="product__details__tab">
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                  aria-selected="true">Mô tả</a>
+                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="true">Mô tả</a>
               </li>
             </ul>
             <div class="tab-content">

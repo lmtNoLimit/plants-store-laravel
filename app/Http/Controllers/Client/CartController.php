@@ -99,6 +99,7 @@ class CartController extends Controller
         $order->name = $request->input('name');
         $order->email = $request->input('email');
         $order->phone = $request->input('phone');
+        $order->status = 'Pending';
         $order->address = $request->input('address');
         $order->save();
         $cart = (Cart::where('user_id', auth()->user()->id)->get())[0];
